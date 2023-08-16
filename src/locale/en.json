@@ -4,12 +4,15 @@
   "header.helpSection.track": "Track your order",
   "header.MiddleSection.signIn": "Sign In",
   "header.MiddleSection.cart": "Cart",
-  "navigation.browse": "Browse Categories",
+  "navigation.browse": "Categories",
   "navigation.home": "Home",
   "navigation.catalogue": "Catalogue",
   "navigation.services": "Services",
   "navigation.news": "News",
   "navigation.about": "About Us",
   "navigation.return": "30 Days Free Return",
+  "slider.button.shopNow": "Shop now",
+  "slider.button.viewMore": "View More",
+  "shared.black": "Black",
   "shared.search": "Search"
 }

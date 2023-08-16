@@ -12,12 +12,13 @@ import logo from '../../assets/logo.svg';
 import { useState } from 'react';
 import useMediaQuery from '../../shared/hooks/useMediaQuery';
 import BurgerButton from './BurgerButton';
+import MobileMenu from './MobileMenu';
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const { t } = useTranslation();
   const matchesMenu = useMediaQuery('(min-width: 931px)');
-  const matchesProfile = useMediaQuery('(min-width: 659px)');
+  const matchesProfile = useMediaQuery('(min-width: 704px)');
 
   return (
     <StyledHeader>
@@ -75,7 +76,6 @@ export default function Header() {
               <a href="/">{t('navigation.catalogue')}</a>
               <a href="/">{t('navigation.services')}</a>
               <a href="/">{t('navigation.news')}</a>
-              <a href="/">{t('navigation.about')}</a>
             </NavigationLinks>
           </TabsStyled>
           <ReturnInfo>{t('navigation.return')}</ReturnInfo>
@@ -83,19 +83,29 @@ export default function Header() {
       ) : (
         <Navigation>
           <BurgerButton openMenu={openMenu} setOpenMenu={setOpenMenu} />
+          {openMenu && (
+            <MobileMenu setOpenMenu={setOpenMenu} openMenu={openMenu} />
+          )}
         </Navigation>
       )}
     </StyledHeader>
   );
 }
 
-const StyledHeader = styled.header``;
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+`;
 
 const HelpSection = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 60px;
-  @media (max-width: 713px) {
+  background: #f4f4f4;
+  @media (max-width: 931px) {
+    order: 3;
+  }
+  @media (max-width: 802px) {
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -128,6 +138,9 @@ const HelpButton = styled.button`
     color: #113c53;
     text-decoration: underline;
   }
+  @media (max-width: 854px) {
+    gap: 8px;
+  }
 `;
 
 const MiddleSection = styled.div`
@@ -135,9 +148,12 @@ const MiddleSection = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  @media (max-width: 931px) {
+    order: 2;
+  }
   padding: 20px 60px;
   background-color: #003f62;
-  @media (max-width: 1174px) {
+  @media (max-width: 1195px) {
     padding: 20px 20px;
   }
   @media (max-width: 461px) {
@@ -149,7 +165,7 @@ const LogoSearchContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 110px;
-  @media (max-width: 1174px) {
+  @media (max-width: 1195px) {
     gap: 30px;
   }
   @media (max-width: 559px) {
@@ -174,7 +190,7 @@ const ShopName = styled.div`
   color: white;
   font-size: 34px;
   font-weight: 700;
-  @media (max-width: 854px) {
+  @media (max-width: 890px) {
     display: none;
   }
 `;
@@ -203,7 +219,7 @@ const StyledSearch = styled.input`
   &:focus {
     outline: none;
   }
-  @media (max-width: 978px) {
+  @media (max-width: 1190px) {
     width: 300px;
   }
 `;
@@ -257,7 +273,7 @@ const BrowseButton = styled.button`
   font-size: 16px;
   padding: 0 14px;
   color: white;
-  @media (max-width: 1174px) {
+  @media (max-width: 1195px) {
     margin-left: 30px;
   }
 `;
@@ -267,7 +283,6 @@ const NavigationLinks = styled.div`
   font-weight: 500;
   gap: 26px;
   align-self: center;
-
   a {
     &:hover {
       color: #1b5a7d;
@@ -277,9 +292,12 @@ const NavigationLinks = styled.div`
 `;
 
 const ReturnInfo = styled.span`
+  color: #003f62;
+  font-size: 16px;
+  font-weight: 700;
   align-self: center;
   padding-right: 60px;
-  @media (max-width: 1174px) {
+  @media (max-width: 1195px) {
     padding-right: 20px;
   }
 `;

@@ -4,12 +4,15 @@
   "header.helpSection.track": "Отследить ваш заказ",
   "header.MiddleSection.signIn": "Войти",
   "header.MiddleSection.cart": "Корзина",
-  "navigation.browse": "Просмотреть категории",
+  "navigation.browse": "Категории",
   "navigation.home": "Главная",
   "navigation.catalogue": "Каталог",
   "navigation.services": "Услуги",
   "navigation.news": "Новости",
   "navigation.about": "О нас",
   "navigation.return": "30 дней бесплатного возврата",
+  "shared.black": "Чёрный",
+  "slider.button.shopNow": "Купить",
+  "slider.button.viewMore": "Посмотреть еще",
   "shared.search": "Поиск"
 }
