@@ -5,8 +5,11 @@ import laptop from '../../../assets/laptop.png';
 import speaker from '../../../assets/speaker.png';
 import controller from '../../../assets/controller-black.png';
 import { StyledTitle } from '../../../shared/styled/styled';
+import { useTranslation } from 'react-i18next';
 
 export default function SmallSlider() {
+  const { t } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -40,7 +43,9 @@ export default function SmallSlider() {
   };
   return (
     <SliderWrapper>
-      <StyledTitle style={{ margin: '0 0 30px 0' }}>New Goods</StyledTitle>
+      <StyledTitle style={{ margin: '0 0 30px 0' }}>
+        {t('home.title.newGoods')}
+      </StyledTitle>
       <SliderStyled {...settings}>
         <Card>
           <ImgWrapper>

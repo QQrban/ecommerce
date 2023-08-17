@@ -13,5 +13,11 @@
   "navigation.return": "30 päeva tasuta tagastus",
   "slider.button.shopNow": "Osta kohe",
   "slider.button.viewMore": "Vaata rohkem",
-  "shared.search": "Otsi"
+  "home.title.newGoods": "Uued kaubad",
+  "home.title.popularGoods": "Populaarsed kaubad",
+  "home.popular.pills.cameras": "Kaamerad",
+  "home.popular.pills.laptops": "Sülearvutid",
+  "home.popular.pills.tablets": "Tahvelarvutid",
+  "shared.search": "Otsi",
+  "shared.addToCart": "Lisa korvi"
 }

@@ -28,7 +28,7 @@ export default function Header() {
           <LanguageWrapper>
             <ChangeLanguage />
           </LanguageWrapper>
-          {t('header.helpSection.needHelp')}:{' '}
+          {t('header.helpSection.needHelp')}:&nbsp;
           <Phone href="tel:+37255511221">(+372) 555-11-221</Phone>
         </PhoneLang>
         <HelpButtons>
@@ -119,7 +119,7 @@ const HelpSection = styled.div`
 
 const LanguageWrapper = styled.div`
   margin-right: 15px;
-  @media (max-width: 460px) {
+  @media (max-width: 461px) {
     display: block;
     margin: 0 0 10px 0;
   }
@@ -129,6 +129,10 @@ const PhoneLang = styled.div`
   font-size: 14px;
   display: flex;
   align-items: center;
+  gap: 4px;
+  @media (max-width: 461px) {
+    flex-direction: column;
+  }
 `;
 
 const Phone = styled.a`

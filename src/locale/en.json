@@ -13,5 +13,11 @@
   "navigation.return": "30 Days Free Return",
   "slider.button.shopNow": "Shop now",
   "slider.button.viewMore": "View More",
-  "shared.search": "Search"
+  "home.title.newGoods": "New Goods",
+  "home.title.popularGoods": "Popular Goods",
+  "home.popular.pills.cameras": "Cameras",
+  "home.popular.pills.laptops": "Laptops",
+  "home.popular.pills.tablets": "Tablets",
+  "shared.search": "Search",
+  "shared.addToCart": "Add to cart"
 }

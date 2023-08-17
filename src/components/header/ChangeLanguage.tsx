@@ -57,7 +57,6 @@ export default function ChangeLanguage() {
         <Flag code={language.code} height={16} />
         {language.value}
       </ChooseLanguage>
-
       <Dropdown.Menu>
         <Language onClick={() => pickLanguage('en', languages.en)}>
           <Flag code="gb" height={16} />
@@ -77,12 +76,8 @@ export default function ChangeLanguage() {
 }
 
 const DropdownStyled = styled(Dropdown)`
-  margin-top: 5px;
   display: flex;
   justify-content: center;
-  @media (max-width: 802px) {
-    margin-top: 15px;
-  }
 `;
 
 const ChooseLanguage = styled(Dropdown.Toggle)`

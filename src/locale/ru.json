@@ -13,5 +13,11 @@
   "navigation.return": "30 дней бесплатного возврата",
   "slider.button.shopNow": "Купить",
   "slider.button.viewMore": "Посмотреть еще",
-  "shared.search": "Поиск"
+  "home.title.newGoods": "Новые товары",
+  "home.title.popularGoods": "Популярные товары",
+  "home.popular.pills.cameras": "Камеры",
+  "home.popular.pills.laptops": "Ноутбуки",
+  "home.popular.pills.tablets": "Планшеты",
+  "shared.search": "Поиск",
+  "shared.addToCart": "В корзину"
 }

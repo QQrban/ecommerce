@@ -186,9 +186,6 @@ const ShopButton = styled.button`
     padding: 10px 20px;
   }
   &:hover {
-    // outline: 1px solid #eda415;
-    // background: inherit;
-    // color: #eda415;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   }
 `;
