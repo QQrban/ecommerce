@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Flag from 'react-world-flags';
 import { styled } from 'styled-components';
@@ -29,7 +29,13 @@ const languages: ILanguages = {
 };
 
 export default function ChangeLanguage() {
-  const [language, setLanguage] = useState<ILanguage>(languages.en);
+  const defaultLanguage: ILanguage = languages.en;
+  const storedLanguage = localStorage.getItem('language');
+  const initialLanguage = storedLanguage
+    ? JSON.parse(storedLanguage)
+    : defaultLanguage;
+
+  const [language, setLanguage] = useState<ILanguage>(initialLanguage);
   const { i18n } = useTranslation();
 
   const changeLanguage = (language: string) => {
@@ -40,6 +46,10 @@ export default function ChangeLanguage() {
     changeLanguage(language);
     setLanguage(value);
   };
+
+  useEffect(() => {
+    localStorage.setItem('language', JSON.stringify(language));
+  }, [language]);
 
   return (
     <DropdownStyled>
@@ -80,6 +90,9 @@ const ChooseLanguage = styled(Dropdown.Toggle)`
   align-items: center;
   gap: 6px;
   border: 1px solid #adadad;
+  &:hover {
+    border: 1px solid black;
+  }
 `;
 
 const Language = styled(Dropdown.Item)`

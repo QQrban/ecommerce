@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import camera from '../../assets/camera.png';
-import airpods from '../../assets/pods.png';
-import mac from '../../assets/watch.png';
+import camera from '../../../assets/camera.png';
+import airpods from '../../../assets/pods.png';
+import mac from '../../../assets/watch.png';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 

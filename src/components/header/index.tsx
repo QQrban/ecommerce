@@ -18,16 +18,18 @@ import ChangeLanguage from './ChangeLanguage';
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const { t } = useTranslation();
-  const matchesMenu = useMediaQuery('(min-width: 931px)');
+  const matchesMenu = useMediaQuery('(min-width: 932px)');
   const matchesProfile = useMediaQuery('(min-width: 704px)');
 
   return (
     <StyledHeader>
       <HelpSection>
         <PhoneLang>
+          <LanguageWrapper>
+            <ChangeLanguage />
+          </LanguageWrapper>
           {t('header.helpSection.needHelp')}:{' '}
           <Phone href="tel:+37255511221">(+372) 555-11-221</Phone>
-          <ChangeLanguage />
         </PhoneLang>
         <HelpButtons>
           <HelpButton>
@@ -107,7 +109,7 @@ const HelpSection = styled.div`
   @media (max-width: 931px) {
     order: 3;
   }
-  @media (max-width: 802px) {
+  @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -115,8 +117,17 @@ const HelpSection = styled.div`
   }
 `;
 
+const LanguageWrapper = styled.div`
+  margin-right: 15px;
+  @media (max-width: 460px) {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+`;
+
 const PhoneLang = styled.div`
   font-size: 14px;
+  display: flex;
   align-items: center;
 `;
 

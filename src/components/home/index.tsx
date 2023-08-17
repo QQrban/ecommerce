@@ -1,11 +1,19 @@
-import BigSlider from './BigSlider';
-import SmallSlider from './SmallSlider';
+import Popular from './popular/Popular';
+import BigSlider from './slider/BigSlider';
+import SmallSlider from './slider/SmallSlider';
+import { styled } from 'styled-components';
 
 export default function Home() {
   return (
-    <div>
+    <SliderWrapper>
       <BigSlider />
       <SmallSlider />
-    </div>
+      <Popular />
+    </SliderWrapper>
   );
 }
+
+const SliderWrapper = styled.div`
+  max-width: 1300px;
+  margin: 0 auto;
+`;

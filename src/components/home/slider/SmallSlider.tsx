@@ -1,9 +1,10 @@
 import Slider from 'react-slick';
 import './SmallSlider.css';
 import { styled } from 'styled-components';
-import laptop from '../../assets/laptop.png';
-import speaker from '../../assets/speaker.png';
-import controller from '../../assets/controller-black.png';
+import laptop from '../../../assets/laptop.png';
+import speaker from '../../../assets/speaker.png';
+import controller from '../../../assets/controller-black.png';
+import { StyledTitle } from '../../../shared/styled/styled';
 
 export default function SmallSlider() {
   const settings = {
@@ -18,7 +19,7 @@ export default function SmallSlider() {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 929,
+        breakpoint: 1068,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -27,7 +28,7 @@ export default function SmallSlider() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 764,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -39,6 +40,7 @@ export default function SmallSlider() {
   };
   return (
     <SliderWrapper>
+      <StyledTitle style={{ margin: '0 0 30px 0' }}>New Goods</StyledTitle>
       <SliderStyled {...settings}>
         <Card>
           <ImgWrapper>
@@ -98,17 +100,6 @@ export default function SmallSlider() {
         <Card>
           <ImgWrapper>
             <ImgContainer>
-              <img src={controller} alt="" />
-            </ImgContainer>
-            <div>
-              <div>Speaker</div>
-              <div>{'(3 items)'}</div>
-            </div>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
               <img src={laptop} alt="" />
             </ImgContainer>
             <div>
@@ -145,20 +136,20 @@ export default function SmallSlider() {
 }
 
 const SliderWrapper = styled.div`
-  max-width: 1200px;
-  margin: 104px auto 0 auto;
-  @media (max-width: 929px) {
-    max-width: 600px;
+  padding: 5px 10px;
+  margin: 30px auto 0 auto;
+  @media (max-width: 1068px) {
+    max-width: 700px;
   }
-  @media (max-width: 600px) {
-    max-width: 300px;
+  @media (max-width: 764px) {
+    max-width: 320px;
   }
 `;
 
 const SliderStyled = styled(Slider)``;
 
 const Card = styled.div`
-  max-width: 270px;
+  max-width: 320px;
   height: 160px;
   display: flex !important;
   border-radius: 20px;
