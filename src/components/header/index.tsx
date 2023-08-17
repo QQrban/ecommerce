@@ -13,6 +13,7 @@ import { useState } from 'react';
 import useMediaQuery from '../../shared/hooks/useMediaQuery';
 import BurgerButton from './BurgerButton';
 import MobileMenu from './MobileMenu';
+import ChangeLanguage from './ChangeLanguage';
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -23,10 +24,11 @@ export default function Header() {
   return (
     <StyledHeader>
       <HelpSection>
-        <PhoneButton>
+        <PhoneLang>
           {t('header.helpSection.needHelp')}:{' '}
           <Phone href="tel:+37255511221">(+372) 555-11-221</Phone>
-        </PhoneButton>
+          <ChangeLanguage />
+        </PhoneLang>
         <HelpButtons>
           <HelpButton>
             <GoLocation size={24} />
@@ -100,7 +102,7 @@ const StyledHeader = styled.header`
 const HelpSection = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
+  padding: 10px 60px;
   background: #f4f4f4;
   @media (max-width: 931px) {
     order: 3;
@@ -113,8 +115,9 @@ const HelpSection = styled.div`
   }
 `;
 
-const PhoneButton = styled.div`
+const PhoneLang = styled.div`
   font-size: 14px;
+  align-items: center;
 `;
 
 const Phone = styled.a`

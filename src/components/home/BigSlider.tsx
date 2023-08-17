@@ -1,30 +1,84 @@
 import { styled } from 'styled-components';
 import camera from '../../assets/camera.png';
+import airpods from '../../assets/pods.png';
+import mac from '../../assets/watch.png';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
-export default function Slider() {
+interface ICarousel {
+  name: string;
+  photo: string;
+}
+
+interface ICarousels {
+  [key: string]: ICarousel;
+}
+
+export default function BigSlider() {
   const { t } = useTranslation();
+
+  const carousel: ICarousels = {
+    nikon: {
+      name: `Nikon D3300 + 18-55mm VR II Kit, Black`,
+      photo: camera,
+    },
+    pods: {
+      name: `Apple AirPods 2 - True-Wireless Earbuds`,
+      photo: airpods,
+    },
+    macbook: {
+      name: `Apple Watch Series 8 GPS, Silver`,
+      photo: mac,
+    },
+  };
+
+  const [activeSlide, setActiveSlide] = useState<ICarousel>(carousel.nikon);
+  const [isChanging, setIsChanging] = useState<boolean>(false);
+
+  const handleChangeSlide = (newSlide: ICarousel) => {
+    setIsChanging(true);
+
+    setTimeout(() => {
+      setActiveSlide(newSlide);
+      setIsChanging(false);
+    }, 500);
+  };
+
   return (
     <SliderWrapper>
       <LeftColumn>
-        <ProductName>
-          Nikon D3300 + 18-55mm VR II Kit, {t('shared.black')}
-        </ProductName>
+        <ProductName>{activeSlide.name}</ProductName>
         <SliderButtons>
           <ShopButton>{t('slider.button.shopNow')}</ShopButton>
           <ViewButton>{t('slider.button.viewMore')}</ViewButton>
         </SliderButtons>
         <RadioWrapper>
-          <input defaultChecked type="radio" id="option1" name="option1" />
+          <input
+            onClick={() => handleChangeSlide(carousel.nikon)}
+            defaultChecked
+            type="radio"
+            id="option1"
+            name="option1"
+          />
           <RadioButtonLabel htmlFor="option1"></RadioButtonLabel>
-          <input type="radio" id="option2" name="option1" />
+          <input
+            onClick={() => handleChangeSlide(carousel.pods)}
+            type="radio"
+            id="option2"
+            name="option1"
+          />
           <RadioButtonLabel htmlFor="option2"></RadioButtonLabel>
-          <input type="radio" id="option3" name="option1" />
+          <input
+            onClick={() => handleChangeSlide(carousel.macbook)}
+            type="radio"
+            id="option3"
+            name="option1"
+          />
           <RadioButtonLabel htmlFor="option3"></RadioButtonLabel>
         </RadioWrapper>
       </LeftColumn>
-      <ImgWrapper>
-        <img src={camera} alt="camera" />
+      <ImgWrapper $isсhanging={isChanging}>
+        <img src={activeSlide.photo} alt="camera" />
       </ImgWrapper>
     </SliderWrapper>
   );
@@ -52,6 +106,23 @@ const ProductName = styled.div`
   font-size: 43px;
   font-weight: 700;
   max-width: 400px;
+`;
+
+type ImgWrapperProps = {
+  $isсhanging: boolean;
+};
+
+const ImgWrapper = styled.div<ImgWrapperProps>`
+  transition: opacity 0.5s ease-in-out;
+  opacity: ${({ $isсhanging }) => ($isсhanging ? 0 : 1)};
+  width: 331px;
+  flex-shrink: 0;
+  @media (max-width: 458px) {
+    width: 280px;
+  }
+  .fadeOut {
+    opacity: 0;
+  }
 `;
 
 const SliderButtons = styled.div`
@@ -136,13 +207,5 @@ const ViewButton = styled.button`
     background: #316887;
     color: white;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  }
-`;
-
-const ImgWrapper = styled.div`
-  width: 331px;
-  flex-shrink: 0;
-  @media (max-width: 458px) {
-    width: 280px;
   }
 `;
