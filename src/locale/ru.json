@@ -18,6 +18,17 @@
   "home.popular.pills.cameras": "Камеры",
   "home.popular.pills.laptops": "Ноутбуки",
   "home.popular.pills.tablets": "Планшеты",
+  "poster.title": "Мы примем ваш ноутбук по программе Trade-in",
+  "poster.description": "Обменяйте свой старый ноутбук на новый с помощью нашей программы обмена.",
+  "poster.button": "Узнать больше",
+  "benefits.shipment.title": "Бесплатная доставка",
+  "benefits.shipment.description": "при заказе свыше 50€",
+  "benefits.quality.title": "Лучшее качество",
+  "benefits.quality.description": "лучшее качество по низкой цене",
+  "benefits.warranty.title": "Гарантия",
+  "benefits.warranty.description": "2 года гарантии",
+  "home.news.title": "Последние новости",
+  "home.news.button": "Показать все",
   "shared.search": "Поиск",
   "shared.addToCart": "В корзину"
 }

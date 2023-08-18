@@ -264,6 +264,9 @@ const ProfileButton = styled.button`
   gap: 20px;
   color: white;
   font-size: 14px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Navigation = styled.nav`

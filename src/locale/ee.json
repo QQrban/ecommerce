@@ -18,6 +18,17 @@
   "home.popular.pills.cameras": "Kaamerad",
   "home.popular.pills.laptops": "Sülearvutid",
   "home.popular.pills.tablets": "Tahvelarvutid",
+  "poster.title": "Vahetage oma sülearvuti uue vastu.",
+  "poster.description": "Vahetage oma vana sülearvuti uue vastu meie vahetusprogrammi raames.",
+  "poster.button": "Loe rohkem",
+  "benefits.shipment.title": "Tasuta kohaletoimetamine",
+  "benefits.shipment.description": "tellimustel üle 50€",
+  "benefits.quality.title": "Parim kvaliteet",
+  "benefits.quality.description": "parim kvaliteet madala hinnaga",
+  "benefits.warranty.title": "Garantii",
+  "benefits.warranty.description": "2 aasta garantii",
+  "home.news.title": "Värsked Uudised",
+  "home.news.button": "Näita kõiki",
   "shared.search": "Otsi",
   "shared.addToCart": "Lisa korvi"
 }

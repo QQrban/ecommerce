@@ -1,8 +1,8 @@
 import Slider from 'react-slick';
 import './SmallSlider.css';
 import { styled } from 'styled-components';
+import iphone from '../../../assets/iphone.png';
 import laptop from '../../../assets/laptop.png';
-import speaker from '../../../assets/speaker.png';
 import controller from '../../../assets/controller-black.png';
 import { StyledTitle } from '../../../shared/styled/styled';
 import { useTranslation } from 'react-i18next';
@@ -22,7 +22,7 @@ export default function SmallSlider() {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1068,
+        breakpoint: 1357,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -31,7 +31,7 @@ export default function SmallSlider() {
         },
       },
       {
-        breakpoint: 764,
+        breakpoint: 877,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -50,23 +50,9 @@ export default function SmallSlider() {
         <Card>
           <ImgWrapper>
             <ImgContainer>
-              <img src={laptop} alt="" />
+              <img src={iphone} alt="" />
             </ImgContainer>
-            <div>
-              <div>Laptop</div>
-              <div>{'(6 items)'}</div>
-            </div>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={speaker} alt="" />
-            </ImgContainer>
-            <div>
-              <div>Speaker</div>
-              <div>{'(3 items)'}</div>
-            </div>
+            <CardText>iPhone 14 Pro Max 256GB 5G</CardText>
           </ImgWrapper>
         </Card>
         <Card>
@@ -74,10 +60,7 @@ export default function SmallSlider() {
             <ImgContainer>
               <img src={controller} alt="" />
             </ImgContainer>
-            <div>
-              <div>Speaker</div>
-              <div>{'(3 items)'}</div>
-            </div>
+            <CardText>Microsoft Xbox One / Series X/S</CardText>
           </ImgWrapper>
         </Card>
         <Card>
@@ -85,21 +68,15 @@ export default function SmallSlider() {
             <ImgContainer>
               <img src={laptop} alt="" />
             </ImgContainer>
-            <div>
-              <div>Laptop</div>
-              <div>{'(6 items)'}</div>
-            </div>
+            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
           </ImgWrapper>
         </Card>
         <Card>
           <ImgWrapper>
             <ImgContainer>
-              <img src={speaker} alt="" />
+              <img src={iphone} alt="" />
             </ImgContainer>
-            <div>
-              <div>Speaker</div>
-              <div>{'(3 items)'}</div>
-            </div>
+            <CardText>iPhone 14 Pro Max 256GB 5G</CardText>
           </ImgWrapper>
         </Card>
         <Card>
@@ -107,32 +84,31 @@ export default function SmallSlider() {
             <ImgContainer>
               <img src={laptop} alt="" />
             </ImgContainer>
-            <div>
-              <div>Laptop</div>
-              <div>{'(6 items)'}</div>
-            </div>
+            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
           </ImgWrapper>
         </Card>
         <Card>
           <ImgWrapper>
             <ImgContainer>
-              <img src={speaker} alt="" />
+              <img src={iphone} alt="" />
             </ImgContainer>
-            <div>
-              <div>Speaker</div>
-              <div>{'(3 items)'}</div>
-            </div>
+            <CardText>iPhone 14 Pro Max 256GB 5G</CardText>
           </ImgWrapper>
         </Card>
         <Card>
           <ImgWrapper>
             <ImgContainer>
-              <img src={controller} alt="" />
+              <img src={laptop} alt="" />
             </ImgContainer>
-            <div>
-              <div>Speaker</div>
-              <div>{'(3 items)'}</div>
-            </div>
+            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
+          </ImgWrapper>
+        </Card>
+        <Card>
+          <ImgWrapper>
+            <ImgContainer>
+              <img src={laptop} alt="" />
+            </ImgContainer>
+            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
           </ImgWrapper>
         </Card>
       </SliderStyled>
@@ -143,10 +119,10 @@ export default function SmallSlider() {
 const SliderWrapper = styled.div`
   padding: 5px 10px;
   margin: 30px auto 0 auto;
-  @media (max-width: 1068px) {
-    max-width: 700px;
+  @media (max-width: 1357px) {
+    max-width: 850px;
   }
-  @media (max-width: 764px) {
+  @media (max-width: 877px) {
     max-width: 320px;
   }
 `;
@@ -154,9 +130,11 @@ const SliderWrapper = styled.div`
 const SliderStyled = styled(Slider)``;
 
 const Card = styled.div`
-  max-width: 320px;
+  max-width: 400px;
   height: 160px;
   display: flex !important;
+  align-items: center;
+  justify-content: center;
   border-radius: 20px;
   border: 1px solid #a5a5a5;
   align-items: center;
@@ -167,9 +145,13 @@ const Card = styled.div`
 
 const ImgWrapper = styled.div`
   display: flex;
-  padding: 10px 20px;
+  overflow: hidden;
+  padding: 5px 10px;
   gap: 14px;
   align-items: center;
+  img {
+    width: 90%;
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -178,4 +160,10 @@ const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+
+const CardText = styled.div`
+  color: #1b5a7d;
+  font-size: 18px;
+  font-weight: 400;
 `;

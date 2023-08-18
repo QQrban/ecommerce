@@ -50,7 +50,6 @@ const StyledBurger = styled.button<StyledBurgerProps>`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-
     &:first-child {
       transform: ${({ $openmenu }) =>
         $openmenu ? 'rotate(45deg)' : 'rotate(0)'};

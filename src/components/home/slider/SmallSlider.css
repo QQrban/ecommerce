@@ -3,6 +3,13 @@
 
 .slick-dots {
   bottom: -45px;
+  margin: 0 auto;
+  max-width: 1250px;
+}
+@media (max-width: 1357px) {
+  .slick-dots {
+    max-width: 810px;
+  }
 }
 
 .slick-arrow {
@@ -32,4 +39,8 @@
 .slick-prev:before,
 .slick-next:before {
   color: #eda415;
+}
+
+.slick-center {
+  transform: scale(1.1);
 }

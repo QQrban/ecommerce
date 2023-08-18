@@ -1,13 +1,21 @@
 import { StyledTitle } from '../../../shared/styled/styled';
 import { styled } from 'styled-components';
-import camera from '../../../assets/grid-camera.png';
-import pods from '../../../assets/pods.png';
-import watch from '../../../assets/watch.png';
 import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import { populargoods } from './mock';
 
 export default function Popular() {
+  const [page, setPage] = useState<number>(1);
   const { t } = useTranslation();
+
+  const handlePageChange = (newPage: number) => {
+    if (page === newPage) return;
+    setTimeout(() => {
+      setPage(newPage);
+    }, 200);
+  };
+
   return (
     <PopularWrapper style={{ marginTop: '70px', padding: '5px 10px' }}>
       <PopularHeader>
@@ -19,118 +27,55 @@ export default function Popular() {
         </Pills>
       </PopularHeader>
       <PopularGrid>
-        <GridItem>
-          <ImgWrapper>
-            <img src={camera} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
-        <GridItem>
-          <ImgWrapper>
-            <img src={pods} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
-        <GridItem>
-          <ImgWrapper>
-            <img src={watch} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
-        <GridItem>
-          <ImgWrapper>
-            <img src={camera} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
-        <GridItem>
-          <ImgWrapper>
-            <img src={pods} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
-        <GridItem>
-          <ImgWrapper>
-            <img src={watch} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
-        <GridItem>
-          <ImgWrapper>
-            <img src={camera} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
-        <GridItem>
-          <ImgWrapper>
-            <img src={pods} alt="" />
-          </ImgWrapper>
-          <ItemName>Wireless headphones</ItemName>
-          <ItemPrice>$11.70</ItemPrice>
-          <BuyLike>
-            <BuyButton>{t('shared.addToCart')}</BuyButton>
-            <LikeContainer>
-              <LikeIcon size={26} />
-            </LikeContainer>
-          </BuyLike>
-        </GridItem>
+        {page === 1 &&
+          populargoods.slice(0, 8).map((product) => (
+            <GridItem key={product.id}>
+              <ImgWrapper>
+                <img src={product.photo} alt="" />
+              </ImgWrapper>
+              <ItemName>{product.name}</ItemName>
+              <ItemPrice>{product.price}€</ItemPrice>
+              <BuyLike>
+                <BuyButton>{t('shared.addToCart')}</BuyButton>
+                <LikeContainer>
+                  <LikeIcon size={26} />
+                </LikeContainer>
+              </BuyLike>
+            </GridItem>
+          ))}
+        {page === 2 &&
+          populargoods.slice(8, 16).map((product) => (
+            <GridItem key={product.id}>
+              <ImgWrapper>
+                <img src={product.photo} alt="" />
+              </ImgWrapper>
+              <ItemName>{product.name}</ItemName>
+              <ItemPrice>{product.price}€</ItemPrice>
+              <BuyLike>
+                <BuyButton>{t('shared.addToCart')}</BuyButton>
+                <LikeContainer>
+                  <LikeIcon size={26} />
+                </LikeContainer>
+              </BuyLike>
+            </GridItem>
+          ))}
       </PopularGrid>
       <RadioWrapper>
-        <input defaultChecked type="radio" id="option10" name="option10" />
+        <input
+          onClick={() => handlePageChange(1)}
+          defaultChecked
+          type="radio"
+          id="option10"
+          name="option10"
+        />
         <RadioButtonLabel htmlFor="option10"></RadioButtonLabel>
-        <input type="radio" id="option20" name="option10" />
+        <input
+          onClick={() => handlePageChange(2)}
+          type="radio"
+          id="option20"
+          name="option10"
+        />
         <RadioButtonLabel htmlFor="option20"></RadioButtonLabel>
-        <input type="radio" id="option30" name="option10" />
-        <RadioButtonLabel htmlFor="option30"></RadioButtonLabel>
       </RadioWrapper>
     </PopularWrapper>
   );
@@ -144,7 +89,7 @@ const PopularHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 857px) {
+  @media (max-width: 882px) {
     flex-direction: column;
     gap: 15px;
   }
@@ -155,6 +100,10 @@ const Pills = styled.div`
   gap: 13px;
   @media (max-width: 514px) {
     gap: 7px;
+  }
+  @media (max-width: 364px) {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 
@@ -169,7 +118,7 @@ const Pill = styled.button`
     background: #1b5a7d;
     color: white;
   }
-  @media (max-width: 514px) {
+  @media (max-width: 555px) {
     padding: 5px 10px;
   }
 `;
@@ -196,7 +145,7 @@ const PopularGrid = styled.div`
 
 const GridItem = styled.div`
   width: 300px;
-  height: 270px;
+  height: 310px;
   border-radius: 19.671px;
   border: 1px solid #b6b6b6;
   display: flex;
