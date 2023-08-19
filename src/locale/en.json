@@ -27,7 +27,12 @@
   "benefits.quality.description": "best quality in low price",
   "benefits.warranty.title": "Warranty",
   "benefits.warranty.description": "2 years warranty",
-  "home.news.title": "Latest News",
+  "news.samsung.title": "Samsung Galaxy S24: A sneak peek at the upcoming flagship",
+  "news.samsung.text": "Samsung has released a teaser for its upcoming Galaxy S24, revealing exciting new features such as an under-display camera and enhanced battery life. Industry insiders expect the device to compete directly with Apple's latest iPhone.",
+  "news.xiaomi.title": "Xiaomi Mi 13: A powerhouse with a competitive price",
+  "news.xiaomi.text": "Chinese manufacturer Xiaomi is gearing up to launch its Mi 13 smartphone, boasting flagship-level specifications at a mid-range price. The device will feature a 120Hz display, a powerful Snapdragon chipset, and an impressive camera system.",
+  "news.button": "Read more",
+  "home.news.title": "News",
   "home.news.button": "View All",
   "shared.search": "Search",
   "shared.addToCart": "Add to cart"

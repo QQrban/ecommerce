@@ -27,8 +27,13 @@
   "benefits.quality.description": "parim kvaliteet madala hinnaga",
   "benefits.warranty.title": "Garantii",
   "benefits.warranty.description": "2 aasta garantii",
-  "home.news.title": "Värsked Uudised",
+  "home.news.title": "Uudised",
   "home.news.button": "Näita kõiki",
+  "news.samsung.title": "Samsung Galaxy S24: pilguheit tulevasele lipulaevale",
+  "news.samsung.text": "Samsung on avaldanud oma tulevase Galaxy S24 jaoks teaser'i, paljastades põnevaid uusi funktsioone, nagu ekraani all olev kaamera ja parem aku kestvus. Tööstuseinspektorid ootavad, et seade konkureeriks otse Apple'i uusima iPhone'iga.",
+  "news.xiaomi.title": "Xiaomi Mi 13: võimas nutitelefon konkurentsivõimelise hinnaga",
+  "news.xiaomi.text": "Hiina tootja Xiaomi valmistub turule tooma oma Mi 13 nutitelefoni, mis pakub lipulaevale sarnaseid tehnilisi näitajaid keskmise hinnaklassi juures. Seade varustatakse 120 Hz ekraani, võimsa Snapdragoni kiibi ja muljetavaldava kaamerasüsteemiga.",
+  "news.button": "Loe edasi",
   "shared.search": "Otsi",
   "shared.addToCart": "Lisa korvi"
 }

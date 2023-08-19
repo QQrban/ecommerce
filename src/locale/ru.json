@@ -27,8 +27,13 @@
   "benefits.quality.description": "лучшее качество по низкой цене",
   "benefits.warranty.title": "Гарантия",
   "benefits.warranty.description": "2 года гарантии",
-  "home.news.title": "Последние новости",
+  "home.news.title": "Новости",
   "home.news.button": "Показать все",
+  "news.samsung.title": "Samsung Galaxy S24: предварительный просмотр грядущего флагмана",
+  "news.samsung.text": "Samsung выпустила тизер своего предстоящего Galaxy S24, представив захватывающие новые функции, такие как камера под дисплеем и улучшенное время работы от аккумулятора",
+  "news.xiaomi.title": "Xiaomi Mi 13: мощный смартфон с конкурентоспособной ценой",
+  "news.xiaomi.text": "Китайский производитель Xiaomi готовится к запуску смартфона Mi 13, который предлагает характеристики флагмана по средней цене",
+  "news.button": "Читать далее",
   "shared.search": "Поиск",
   "shared.addToCart": "В корзину"
 }
