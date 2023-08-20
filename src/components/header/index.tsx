@@ -194,7 +194,7 @@ const LogoSearchContainer = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 15px;
 `;
 
 const LogoIcon = styled.img`

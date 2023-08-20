@@ -19,7 +19,7 @@ export default function News() {
             <img src={samsung} alt="az" />
           </ImgContainer>
           <NewsInfo>
-            <NewsDate>22 oct 2021</NewsDate>
+            <NewsDate>19.08.2023</NewsDate>
             <NewsTitle>{t('news.samsung.title')}</NewsTitle>
             <NewsText>{t('news.samsung.text')}</NewsText>
             <NewsButton>{t('news.button')}</NewsButton>
@@ -30,7 +30,7 @@ export default function News() {
             <img src={xiaomi} alt="az" />
           </ImgContainer>
           <NewsInfo>
-            <NewsDate>22 oct 2021</NewsDate>
+            <NewsDate>18.08.2023</NewsDate>
             <NewsTitle>{t('news.xiaomi.title')}</NewsTitle>
             <NewsText>{t('news.xiaomi.text')}</NewsText>
             <NewsButton>{t('news.button')}</NewsButton>
@@ -111,7 +111,7 @@ const NewsDate = styled.div`
 const NewsTitle = styled.div`
   color: #1b5a7d;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 8px;
   line-height: 27px;
 `;
