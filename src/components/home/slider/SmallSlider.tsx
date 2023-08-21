@@ -1,11 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
-import './SmallSlider.css';
 import { styled } from 'styled-components';
+import controller from '../../../assets/controller-black.png';
 import iphone from '../../../assets/iphone.png';
 import laptop from '../../../assets/laptop.png';
-import controller from '../../../assets/controller-black.png';
 import { StyledTitle } from '../../../shared/styled/styled';
-import { useTranslation } from 'react-i18next';
+import './SmallSlider.css';
 
 export default function SmallSlider() {
   const { t } = useTranslation();

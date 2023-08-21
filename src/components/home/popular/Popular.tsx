@@ -1,10 +1,10 @@
-import { StyledTitle } from '../../../shared/styled/styled';
-import { styled } from 'styled-components';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect } from 'react';
-import { populargoods } from './mock';
+import { styled } from 'styled-components';
 import useMediaQuery from '../../../shared/hooks/useMediaQuery';
+import { StyledTitle } from '../../../shared/styled/styled';
 import PopularPage from './PopularPage';
+import { populargoods } from './mock';
 
 export default function Popular() {
   const [page, setPage] = useState<number>(1);

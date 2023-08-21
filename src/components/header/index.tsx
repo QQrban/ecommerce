@@ -1,19 +1,15 @@
-import { styled } from 'styled-components';
-import { useTranslation } from 'react-i18next';
-import { GoLocation } from 'react-icons/go';
-import { FiTruck } from 'react-icons/fi';
-import {
-  CgProfile,
-  CgShoppingCart,
-  CgSearch,
-  CgChevronDown,
-} from 'react-icons/cg';
-import logo from '../../assets/logo.svg';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { CgProfile, CgSearch, CgShoppingCart } from 'react-icons/cg';
+import { FiTruck } from 'react-icons/fi';
+import { GoLocation } from 'react-icons/go';
+import { Link } from 'react-router-dom';
+import { styled } from 'styled-components';
+import logo from '../../assets/logo.svg';
 import useMediaQuery from '../../shared/hooks/useMediaQuery';
 import BurgerButton from './BurgerButton';
-import MobileMenu from './MobileMenu';
 import ChangeLanguage from './ChangeLanguage';
+import MobileMenu from './MobileMenu';
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -72,14 +68,11 @@ export default function Header() {
       {matchesMenu ? (
         <Navigation>
           <TabsStyled>
-            <BrowseButton>
-              {t('navigation.browse')} <CgChevronDown size={24} />
-            </BrowseButton>
             <NavigationLinks>
-              <a href="/">{t('navigation.home')}</a>
-              <a href="/">{t('navigation.catalogue')}</a>
-              <a href="/">{t('navigation.services')}</a>
-              <a href="/">{t('navigation.news')}</a>
+              <Link to="/">{t('navigation.home')}</Link>
+              <Link to="/catalogue">{t('navigation.catalogue')}</Link>
+              <Link to="/">{t('navigation.services')}</Link>
+              <Link to="/">{t('navigation.news')}</Link>
             </NavigationLinks>
           </TabsStyled>
           <ReturnInfo>{t('navigation.return')}</ReturnInfo>
@@ -271,6 +264,7 @@ const ProfileButton = styled.button`
 
 const Navigation = styled.nav`
   display: flex;
+  padding-left: 60px;
   justify-content: space-between;
   background: #f4f4f4;
   height: 71px;
@@ -282,20 +276,6 @@ const TabsStyled = styled.div`
   gap: 98px;
   @media (max-width: 1174px) {
     gap: 30px;
-  }
-`;
-
-const BrowseButton = styled.button`
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: #eda415;
-  margin-left: 60px;
-  font-size: 16px;
-  padding: 0 14px;
-  color: white;
-  @media (max-width: 1195px) {
-    margin-left: 30px;
   }
 `;
 

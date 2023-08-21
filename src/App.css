@@ -22,9 +22,17 @@ img {
   display: block;
 }
 
+html,
 body {
   font-family: 'Open Sans', sans-serif;
   color: #292d32 !important;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 button {

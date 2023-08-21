@@ -1,6 +1,6 @@
-import { styled } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { MdOutlineFavoriteBorder } from 'react-icons/md';
+import { styled } from 'styled-components';
 
 interface Product {
   id: number;

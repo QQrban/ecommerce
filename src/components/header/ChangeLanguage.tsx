@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { useTranslation } from 'react-i18next';
 import Flag from 'react-world-flags';
 import { styled } from 'styled-components';
-import { useTranslation } from 'react-i18next';
 
 interface ILanguage {
   code: string;

@@ -1,6 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { styled } from 'styled-components';
 import poster from '../../../assets/poster.png';
-import { useTranslation } from 'react-i18next';
 
 export default function Poster() {
   const { t } = useTranslation();

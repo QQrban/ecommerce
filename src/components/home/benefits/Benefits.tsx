@@ -1,7 +1,7 @@
-import { BsFillBoxFill, BsShieldFillCheck } from 'react-icons/bs';
-import { BiSolidCrown } from 'react-icons/bi';
-import { styled } from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { BiSolidCrown } from 'react-icons/bi';
+import { BsFillBoxFill, BsShieldFillCheck } from 'react-icons/bs';
+import { styled } from 'styled-components';
 
 export default function Benefits() {
   const { t } = useTranslation();

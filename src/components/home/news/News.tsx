@@ -1,8 +1,8 @@
-import { styled } from 'styled-components';
-import { StyledTitle } from '../../../shared/styled/styled';
 import { useTranslation } from 'react-i18next';
+import { styled } from 'styled-components';
 import samsung from '../../../assets/samsung.webp';
 import xiaomi from '../../../assets/xiaomi.png';
+import { StyledTitle } from '../../../shared/styled/styled';
 
 export default function News() {
   const { t } = useTranslation();

@@ -1,10 +1,10 @@
+import { styled } from 'styled-components';
 import Benefits from './benefits/Benefits';
 import News from './news/News';
 import Popular from './popular/Popular';
 import Poster from './poster/Poster';
 import BigSlider from './slider/BigSlider';
 import SmallSlider from './slider/SmallSlider';
-import { styled } from 'styled-components';
 
 export default function Home() {
   return (
