@@ -1,14 +1,17 @@
 import { styled } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   label: string;
 };
 
 export default function CategoriesTitle({ label }: Props) {
+  const { t } = useTranslation();
+
   return (
     <Title>
       <TitleLabel>{label}</TitleLabel>
-      <StyledButton>Reset</StyledButton>
+      <StyledButton>{t('filter.reset')}</StyledButton>
     </Title>
   );
 }

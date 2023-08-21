@@ -3,60 +3,63 @@ import { styled } from 'styled-components';
 import CategoriesTitle from './CategoriesTitle';
 import ExpandFilter from './ExpandFilter';
 import FilterItem from './FilterItem';
-
-const filtersCategories = [
-  {
-    id: 'all',
-    label: 'All categories',
-    stock: 99,
-  },
-  {
-    id: 'tv',
-    label: `TV's & Home cinema`,
-    stock: 4,
-  },
-  {
-    id: 'computers',
-    label: 'Computers',
-    stock: 8,
-  },
-  {
-    id: 'photovideo',
-    label: 'Photo & Video',
-    stock: 23,
-  },
-  {
-    id: 'headphones',
-    label: 'Headphones',
-    stock: 14,
-  },
-  {
-    id: 'phones',
-    label: 'Phones',
-    stock: 54,
-  },
-  {
-    id: 'gaming',
-    label: 'Gaming',
-    stock: 20,
-  },
-];
+import { useTranslation } from 'react-i18next';
+import { CategoriesType } from './types';
 
 export default function Categories() {
   const [expand, setExpand] = useState<boolean>(true);
+  const { t } = useTranslation();
+
+  const filtersCategories: CategoriesType[] = [
+    {
+      id: 'all',
+      label: t('filter.categories.all'),
+      stock: 99,
+    },
+    {
+      id: 'tv',
+      label: t('filter.categories.tvs'),
+      stock: 4,
+    },
+    {
+      id: 'computers',
+      label: t('filter.categories.computers'),
+      stock: 8,
+    },
+    {
+      id: 'photovideo',
+      label: t('filter.categories.photoVideo'),
+      stock: 23,
+    },
+    {
+      id: 'headphones',
+      label: t('filter.categories.headphones'),
+      stock: 14,
+    },
+    {
+      id: 'phones',
+      label: t('filter.categories.phones'),
+      stock: 54,
+    },
+    {
+      id: 'gaming',
+      label: t('filter.categories.gaming'),
+      stock: 20,
+    },
+  ];
 
   return (
     <>
       <ExpandFilter
         background="#eda415"
-        label="Categories"
+        label={t('filter.categories.title')}
         expand={expand}
         setExpand={setExpand}
       />
       {expand ? '' : <hr />}
       {expand && (
         <CategoriesWrapper>
-          <CategoriesTitle label="Categories" />
+          <CategoriesTitle label={t('filter.categories.title')} />
           <CategoriesBody>
             {filtersCategories.map((filter) => (
               <FilterItem
