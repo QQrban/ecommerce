@@ -45,12 +45,14 @@ export default function Colors() {
 
   return (
     <>
-      <ExpandFilter
-        background="#eda415"
-        label={t('filter.colors.title')}
-        expand={expand}
-        setExpand={setExpand}
-      />
+      <ExpandWrapper>
+        <ExpandFilter
+          background="#eda415"
+          label={t('filter.colors.title')}
+          expand={expand}
+          setExpand={setExpand}
+        />
+      </ExpandWrapper>
       {expand ? '' : <hr />}
       {expand && (
         <ColorWrapper>
@@ -70,6 +72,10 @@ export default function Colors() {
     </>
   );
 }
+
+const ExpandWrapper = styled.div`
+  margin-top: 18px;
+`;
 
 const ColorWrapper = styled.div`
   margin-top: 18px;

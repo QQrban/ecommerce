@@ -1,21 +1,32 @@
-import { capitalize } from 'lodash';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const Breadcrumbs = () => {
   const location = useLocation();
   const paths = location.pathname.split('/').filter((p) => p);
+  const { t } = useTranslation();
+
+  const getBreadCrumb = (segment: string): string | undefined => {
+    const getLabel: { [key: string]: string } = {
+      catalogue: t('navigation.catalogue'),
+      services: t('navigation.services'),
+      news: t('navigation.news'),
+    };
+
+    return getLabel[segment];
+  };
 
   return (
     <BreadcrumbsWrapper>
-      <Link to="/">Home</Link>
+      <Link to="/">{t('navigation.home')}</Link>
       {paths.map((segment, index) => {
         const url = `/${paths.slice(0, index + 1).join('/')}`;
         return (
           <React.Fragment key={index}>
             <div>{' > '}</div>
-            <Link to={url}>{capitalize(segment)}</Link>
+            <Link to={url}>{getBreadCrumb(segment)}</Link>
           </React.Fragment>
         );
       })}

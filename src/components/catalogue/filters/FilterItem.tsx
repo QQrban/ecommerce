@@ -21,6 +21,7 @@ export default function FilterItem({ id, label, stock }: Props) {
 const InputItem = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 8px;
   &:not(:last-child) {
     margin-bottom: 18px;
   }

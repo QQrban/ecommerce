@@ -11,32 +11,45 @@ export default function Price() {
 
   return (
     <>
-      <ExpandFilter
-        background="#003f62"
-        label={t('filter.price.title')}
-        expand={expand}
-        setExpand={setExpand}
-      />
-      {expand ? '' : <hr />}
+      <ExpandWrapper>
+        <ExpandFilter
+          background="#003f62"
+          label={t('filter.price.title')}
+          expand={expand}
+          setExpand={setExpand}
+        />
+      </ExpandWrapper>
       {expand && (
-        <div>
+        <PriceWrapper>
           <CategoriesTitle label={t('filter.price.title')} />
           <PriceBody>
-            <StyledInput min={1} max={9999} type="number" />
+            <StyledInput placeholder="1" min={1} max={9999} type="number" />
             <BsDashLg />
-            <StyledInput min={1} max={9999} type="number" />
+            <StyledInput placeholder="9999" min={1} max={9999} type="number" />
           </PriceBody>
-        </div>
+        </PriceWrapper>
       )}
     </>
   );
 }
+
+const ExpandWrapper = styled.div`
+  margin-top: 18px;
+`;
+
+const PriceWrapper = styled.div`
+  margin-top: 18px;
+`;
 
 const PriceBody = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 18px;
+  @media (max-width: 1000px) {
+    justify-content: flex-start;
+    gap: 10px;
+  }
 `;
 
 const StyledInput = styled.input`

@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 import Breadcrumbs from '../shared/BreadCrumbs';
 import Filters from './filters/Filters';
+import ProductsList from './ProductsList';
 
 export default function Catalogue() {
   return (
@@ -8,10 +9,9 @@ export default function Catalogue() {
       <Breadcrumbs />
       <CatalogueWrapper>
         <FiltersWrapper>
-          <Categories>
-            <Filters />
-          </Categories>
+          <Filters />
         </FiltersWrapper>
+        <ProductsList />
       </CatalogueWrapper>
     </div>
   );
@@ -19,10 +19,18 @@ export default function Catalogue() {
 
 const CatalogueWrapper = styled.div`
   margin-top: 60px;
+  display: flex;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  @media (max-width: 968px) {
+    align-items: center;
+  }
 `;
 
 const FiltersWrapper = styled.div`
-  width: 314px;
+  width: 320px;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
-
-const Categories = styled.div``;

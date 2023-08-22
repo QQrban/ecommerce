@@ -73,8 +73,8 @@
   "filter.colors.white": "Valge",
   "filter.colors.silver": "Hõbe",
   "filter.colors.blue": "Sinine",
-  "filter.colors.other": "Other",
-  "filter.price.title": "Muud",
+  "filter.colors.other": "Muud",
+  "filter.price.title": "Hind",
   "filter.reset": "Lähtesta",
   "shared.search": "Otsi",
   "shared.addToCart": "Lisa korvi"

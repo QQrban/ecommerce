@@ -27,7 +27,6 @@ type ExpandProps = {
 };
 
 const Expand = styled.div<ExpandProps>`
-  margin: 18px 0;
   background: ${({ $background }) => $background};
   padding: 6px;
   display: flex;

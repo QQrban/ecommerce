@@ -60,12 +60,14 @@ export default function Brand() {
 
   return (
     <>
-      <ExpandFilter
-        background="#003f62"
-        label={t('filter.brand.title')}
-        expand={expand}
-        setExpand={setExpand}
-      />
+      <ExpandWrapper>
+        <ExpandFilter
+          background="#003f62"
+          label={t('filter.brand.title')}
+          expand={expand}
+          setExpand={setExpand}
+        />
+      </ExpandWrapper>
       {expand ? '' : <hr />}
       {expand && (
         <BrandWrapper>
@@ -85,6 +87,10 @@ export default function Brand() {
     </>
   );
 }
+
+const ExpandWrapper = styled.div`
+  margin-top: 18px;
+`;
 
 const BrandWrapper = styled.div`
   margin-top: 18px;

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { styled } from 'styled-components';
 import useMediaQuery from '../../../shared/hooks/useMediaQuery';
 import { StyledTitle } from '../../../shared/styled/styled';
-import PopularPage from './PopularPage';
+import ProductItem from '../../shared/ProductItem';
 import { populargoods } from './mock';
 
 export default function Popular() {
@@ -40,13 +40,13 @@ export default function Popular() {
             populargoods
               .slice(0, 8)
               .map((product) => (
-                <PopularPage key={product.id} product={product} />
+                <ProductItem key={product.id} product={product} />
               ))}
           {page === 2 &&
             populargoods
               .slice(8, 16)
               .map((product) => (
-                <PopularPage key={product.id} product={product} />
+                <ProductItem key={product.id} product={product} />
               ))}
         </PopularGrid>
       ) : (
@@ -55,25 +55,25 @@ export default function Popular() {
             populargoods
               .slice(0, 4)
               .map((product) => (
-                <PopularPage key={product.id} product={product} />
+                <ProductItem key={product.id} product={product} />
               ))}
           {page === 2 &&
             populargoods
               .slice(4, 8)
               .map((product) => (
-                <PopularPage key={product.id} product={product} />
+                <ProductItem key={product.id} product={product} />
               ))}
           {page === 3 &&
             populargoods
               .slice(8, 12)
               .map((product) => (
-                <PopularPage key={product.id} product={product} />
+                <ProductItem key={product.id} product={product} />
               ))}
           {page === 4 &&
             populargoods
               .slice(12, 16)
               .map((product) => (
-                <PopularPage key={product.id} product={product} />
+                <ProductItem key={product.id} product={product} />
               ))}
         </PopularGrid>
       )}

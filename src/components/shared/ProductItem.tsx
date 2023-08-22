@@ -13,7 +13,7 @@ type Products = {
   product: Product;
 };
 
-export default function PopularPage({ product }: Products) {
+export default function ProductItem({ product }: Products) {
   const { t } = useTranslation();
 
   return (
