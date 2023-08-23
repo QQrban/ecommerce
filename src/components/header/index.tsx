@@ -71,7 +71,7 @@ export default function Header() {
             <NavigationLinks>
               <Link to="/">{t('navigation.home')}</Link>
               <Link to="/catalogue">{t('navigation.catalogue')}</Link>
-              <Link to="/">{t('navigation.services')}</Link>
+              <Link to="/services/protection">{t('navigation.services')}</Link>
               <Link to="/">{t('navigation.news')}</Link>
             </NavigationLinks>
           </TabsStyled>

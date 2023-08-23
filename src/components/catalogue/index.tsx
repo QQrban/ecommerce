@@ -5,7 +5,7 @@ import ProductsList from './ProductsList';
 
 export default function Catalogue() {
   return (
-    <div>
+    <CatalogueContainer>
       <Breadcrumbs />
       <CatalogueWrapper>
         <FiltersWrapper>
@@ -13,15 +13,23 @@ export default function Catalogue() {
         </FiltersWrapper>
         <ProductsList />
       </CatalogueWrapper>
-    </div>
+    </CatalogueContainer>
   );
 }
+
+const CatalogueContainer = styled.div`
+  padding: 20px 60px;
+  @media (max-width: 1195px) {
+    padding: 20px;
+  }
+`;
 
 const CatalogueWrapper = styled.div`
   margin-top: 60px;
   display: flex;
   @media (max-width: 1000px) {
     flex-direction: column;
+    margin-top: 30px;
   }
   @media (max-width: 968px) {
     align-items: center;

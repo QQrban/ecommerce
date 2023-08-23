@@ -36,7 +36,7 @@ export default function ProductItem({ product }: Products) {
 const GridItem = styled.div`
   width: 300px;
   height: 310px;
-  border-radius: 19.671px;
+  border-radius: 20px;
   border: 1px solid #b6b6b6;
   display: flex;
   flex-direction: column;

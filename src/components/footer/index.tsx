@@ -59,12 +59,10 @@ export default function Footer() {
             </FooterNavigation>
             <FooterNavigation>
               <LinksTitle>{t('footer.services.title')}</LinksTitle>
-              <FooterLink href="#">
-                {t('footer.services.protection')}
-              </FooterLink>
-              <FooterLink href="#">{t('footer.services.tradeIn')}</FooterLink>
-              <FooterLink href="#">{t('footer.services.delivery')}</FooterLink>
-              <FooterLink href="#">{t('footer.services.driveIn')}</FooterLink>
+              <FooterLink href="#">{t('shared.protection')}</FooterLink>
+              <FooterLink href="#">{t('shared.tradeIn')}</FooterLink>
+              <FooterLink href="#">{t('shared.delivery')}</FooterLink>
+              <FooterLink href="#">{t('shared.driveIn')}</FooterLink>
             </FooterNavigation>
             <FooterNavigation>
               <LinksTitle>{t('footer.getHelp.title')}</LinksTitle>

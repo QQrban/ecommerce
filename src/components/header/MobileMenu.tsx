@@ -1,7 +1,7 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { styled } from 'styled-components';
 import { useTranslation } from 'react-i18next';
-
+import { Link } from 'react-router-dom';
 type Props = {
   openMenu: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -17,10 +17,10 @@ export default function MobileMenu({ openMenu, setOpenMenu }: Props) {
         <Offcanvas.Header closeButton></Offcanvas.Header>
         <CanvasBody>
           <NavigationLinks>
-            <a href="/">{t('navigation.home')}</a>
-            <a href="/">{t('navigation.catalogue')}</a>
-            <a href="/">{t('navigation.services')}</a>
-            <a href="/">{t('navigation.news')}</a>
+            <Link to="/">{t('navigation.home')}</Link>
+            <Link to="/catalogue">{t('navigation.catalogue')}</Link>
+            <Link to="/services/protection">{t('navigation.services')}</Link>
+            <Link to="/">{t('navigation.news')}</Link>
           </NavigationLinks>
         </CanvasBody>
       </StyledOffcanvas>

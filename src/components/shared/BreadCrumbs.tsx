@@ -13,6 +13,10 @@ const Breadcrumbs = () => {
       catalogue: t('navigation.catalogue'),
       services: t('navigation.services'),
       news: t('navigation.news'),
+      protection: t('shared.protection'),
+      tradein: t('shared.tradeIn'),
+      delivery: t('shared.delivery'),
+      drivein: t('shared.driveIn'),
     };
 
     return getLabel[segment];

@@ -20,6 +20,7 @@ export default function Home() {
 }
 
 const SliderWrapper = styled.div`
+  padding: 20px;
   max-width: 1300px;
   margin: 0 auto;
 `;

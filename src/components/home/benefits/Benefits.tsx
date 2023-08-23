@@ -61,7 +61,7 @@ const BenefitsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     background: inherit;
-    padding: 15px;
+    padding: 0;
     margin-top: 40px;
   }
 `;
