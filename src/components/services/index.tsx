@@ -42,18 +42,42 @@ export default function Services() {
 
 const ServicesWrapper = styled.div`
   padding: 20px 60px;
+  @media (max-width: 631px) {
+    padding: 20px;
+  }
 `;
 
 const ServicesContainer = styled.div`
   display: flex;
   gap: 80px;
   margin-top: 30px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 const ServicesList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 25px;
+  @media (max-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eda4156b;
+  }
+  @media (max-width: 515px) {
+    gap: 15px;
+  }
+  @media (max-width: 767px) {
+    justify-content: flex-start;
+  }
+  @media (max-width: 468px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: none;
+  }
 `;
 
 const ServicesItem = styled(NavLink)`
@@ -63,6 +87,18 @@ const ServicesItem = styled(NavLink)`
   width: 160px;
   position: relative;
   opacity: 0.8;
+  @media (max-width: 1200px) {
+    z-index: 555;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #eda415;
+  }
+  @media (max-width: 767px) {
+    padding: 8px 12px;
+    width: auto;
+  }
+  @media (max-width: 468px) {
+    text-align: center;
+  }
   &::after {
     content: '';
     position: absolute;
@@ -73,10 +109,17 @@ const ServicesItem = styled(NavLink)`
     border-color: transparent transparent transparent #eda415;
     right: -40px;
     top: 0;
+    @media (max-width: 1200px) {
+      content: none;
+    }
   }
   &.active {
     opacity: 1;
     background: #003f62;
+    @media (max-width: 1200px) {
+      border-bottom: 1px solid #003f62;
+      margin-bottom: -1px;
+    }
     &::after {
       border-color: transparent transparent transparent #003f62;
     }

@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 import warranty from '../../assets/warranty.svg';
 import benefits from '../../assets/benefits.svg';
+import order from '../../assets/order.svg';
 import { useTranslation } from 'react-i18next';
 
 export default function Protection() {
@@ -35,13 +36,29 @@ export default function Protection() {
           <img src={benefits} alt="benefits" />
         </BenefitsImg>
       </ProtectionItem>
+      <OrderProtection>
+        <BenefitsImg>
+          <img src={order} alt="benefits" />
+        </BenefitsImg>
+        <ProtectionText>
+          <ProtectionTitle>
+            {t('services.protection.order.title')}
+          </ProtectionTitle>
+          <ProtectionList>
+            <li>{t('services.protection.order.purchase')}</li>
+            <li>{t('services.protection.order.inTheCart')}</li>
+            <li>{t('services.protection.order.pay')}</li>
+            <li>{t('services.protection.order.completed')}</li>
+            <li>{t('services.protection.order.use')}</li>
+          </ProtectionList>
+        </ProtectionText>
+      </OrderProtection>
     </ProtectionWrapper>
   );
 }
 
 const ProtectionWrapper = styled.section`
   flex: 1;
-  margin: 0 auto;
 `;
 const BigPoster = styled.div`
   padding: 30px;
@@ -54,12 +71,19 @@ const BigPoster = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 35px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const PosterBody = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media (max-width: 1000px) {
+    order: 2;
+    text-align: center;
+  }
 `;
 
 const PosterTitle = styled.h4`
@@ -73,12 +97,19 @@ const PosterText = styled.p`
   max-width: 900px;
   line-height: 43px;
   letter-spacing: 0em;
-  text-align: left;
   color: #fff;
+  @media (max-width: 1000px) {
+    font-size: 30px;
+  }
 `;
 
 const ImgContainer = styled.div`
   min-width: 250px;
+  @media (max-width: 1000px) {
+    order: 1;
+    min-width: auto;
+    width: 180px;
+  }
 `;
 
 const PosterButton = styled.button`
@@ -92,6 +123,9 @@ const PosterButton = styled.button`
   &:hover {
     box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.35);
   }
+  @media (max-width: 1000px) {
+    align-self: center;
+  }
 `;
 
 const ProtectionItem = styled.div`
@@ -100,10 +134,27 @@ const ProtectionItem = styled.div`
   border-radius: 12px;
   display: flex;
   overflow: hidden;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
+const OrderProtection = styled.div`
+  border: 1px solid #b6b6b6;
+  margin-top: 30px;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const ProtectionText = styled.div`
   flex: 1;
+  @media (max-width: 1000px) {
+    order: 2;
+  }
 `;
 
 const ProtectionTitle = styled.h3`
@@ -112,6 +163,10 @@ const ProtectionTitle = styled.h3`
   line-height: 40px;
   padding: 20px;
   border-bottom: 1px solid #b6b6b6;
+  @media (max-width: 380px) {
+    font-size: 26px;
+    text-align: center;
+  }
 `;
 
 const ProtectionList = styled.ul`
@@ -121,6 +176,9 @@ const ProtectionList = styled.ul`
   flex-direction: column;
   gap: 12px;
   list-style: disc;
+  @media (max-width: 380px) {
+    font-size: 15px;
+  }
 `;
 
 const BenefitsImg = styled.div`
@@ -130,4 +188,10 @@ const BenefitsImg = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
+  @media (max-width: 1000px) {
+    order: 1;
+  }
+  @media (max-width: 400px) {
+    min-width: auto;
+  }
 `;
