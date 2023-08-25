@@ -49,7 +49,9 @@ const PosterBody = styled.div`
 const PosterTitle = styled.h4`
   color: #bac3d6;
   font-size: 21px;
-  line-height: 24px;
+  @media (max-width: 1000px) {
+    line-height: 30px;
+  }
 `;
 
 const PosterText = styled.p`
@@ -59,7 +61,7 @@ const PosterText = styled.p`
   letter-spacing: 0em;
   color: #fff;
   @media (max-width: 1000px) {
-    font-size: 30px;
+    font-size: 23px;
   }
 `;
 

@@ -1,8 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { styled } from 'styled-components';
-import warranty from '../../assets/warranty.svg';
 import benefits from '../../assets/benefits.svg';
 import order from '../../assets/order.svg';
-import { useTranslation } from 'react-i18next';
+import warranty from '../../assets/warranty.svg';
 import Poster from './Poster';
 import ServiceItem from './ServiceItem';
 

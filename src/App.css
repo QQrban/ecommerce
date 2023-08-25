@@ -51,3 +51,16 @@ button {
 .btn-close {
   font-size: 26px;
 }
+
+.accordion-button {
+  background-color: #f4f4f4 !important;
+  color: #003f62;
+  font-weight: 600;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: inherit;
+}

@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 import Benefits from './benefits/Benefits';
-import News from './news/News';
+import News from './news/HomeNews';
 import Popular from './popular/Popular';
 import Poster from './poster/Poster';
 import BigSlider from './slider/BigSlider';
