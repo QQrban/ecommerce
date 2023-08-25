@@ -1,0 +1,250 @@
+[
+  {
+    "eng": [
+      {
+        "id": "1",
+        "title": "Tech Startup Launches Revolutionary Product for Small Businesses",
+        "description": "A tech startup, InnovateTech, has released a groundbreaking product designed to streamline operations and boost efficiency for small businesses. The product is already gaining traction in the market, with positive feedback from early adopters.",
+        "author": "Samantha Johnson",
+        "date": "2023-03-16",
+        "img": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "2",
+        "title": "New smartphone from XYZ company hits the market",
+        "description": " XYZ company has introduced its latest smartphone - XYZ ProMax. The device is equipped with a cutting-edge camera, powerful processor, and long-lasting battery. Sales are expected to start next month. Experts predict it will be highly popular among users",
+        "author": "Michael Chen",
+        "date": "2023-03-15",
+        "img": "https://images.unsplash.com/photo-1494366222322-387658a1a976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNtYXJ0cGhvbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "3",
+        "title": "ByteTech Announces the Release of New Laptop for Professionals",
+        "description": "Tech company ByteTech delights its fans with the news of the upcoming launch of the ProWork X1 laptop, specifically crafted for professionals across various fields. The device boasts high-performance components, a sleek design, and advanced security features, undoubtedly setting it to lead its class in the market.",
+        "author": "Emma Watson",
+        "date": "2023-03-13",
+        "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXN0YXRlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "4",
+        "title": "Tech Company Unveils Next-Gen Wearable Device for Fitness Enthusiasts",
+        "description": "Tech company FitTech has announced the launch of their latest wearable device, FitBand Pro, targeted at fitness enthusiasts. The device offers advanced tracking features and a sleek design, making it a top choice in the fitness wearables market.",
+        "author": "James Wilson",
+        "date": "2023-03-12",
+        "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2h8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "5",
+        "title": "GreenWave Unveils Solar-Powered Smartphone with Extended Battery Life",
+        "description": "Innovative tech giant GreenWave has just announced its latest marvel: a solar-powered smartphone named SolarWave X2. This pioneering device promises users extended battery life and reduces the need for frequent charging, addressing the growing demand for sustainable tech solutions.",
+        "author": "Samantha Johnson",
+        "date": "2023-07-18",
+        "img": "https://images.unsplash.com/photo-1598695727992-007150de1b5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdyZWVuJTIwcGhvbmV8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "6",
+        "title": "AeroTech Releases the World's Lightest Laptop for Business Travelers",
+        "description": "Tech manufacturer AeroTech has introduced AeroLite Z3, touted as the world's lightest laptop. Perfect for business travelers, this ultraportable device combines power with featherweight design, ensuring efficiency on the move without weighing you down.",
+        "author": "Sergio Robertson",
+        "date": "2023-07-21",
+        "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHRoaW4lMjBsYXB0b3B8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "7",
+        "title": "VirtualScape käivitab VR-peakomplekti 360-kraadise reaalaja kogemusega",
+        "description": "Juhtides virtuaalse reaalsuse esirinda, tutvustab VirtualScape oma järgmise põlvkonna VR-peakomplekti, OmniView Pro. Pakkudes kasutajatele täielikku 360-kraadist reaalajas sukeldumiskogemust, lubab see määratleda uuesti, kuidas tarbijad suhtlevad digitaalse sisu ja mängukeskkondadega.",
+        "author": "Anthony Abramson",
+        "date": "2023-08-06",
+        "img": "https://images.unsplash.com/photo-1639174326326-6e2ef8d8ae39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHZyfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "8",
+        "title": "NeuroLink Introduces Brain-Computer Interface for Enhanced Cognitive Abilities",
+        "description": "In a groundbreaking move, NeuroLink unveils its latest brain-computer interface, named NeuroBoost Pro. This device claims to enhance cognitive functions and memory recall, bridging the gap between the human mind and technology in unprecedented ways.",
+        "author": "Shikha Thakur",
+        "date": "2023-08-20",
+        "img": "https://images.unsplash.com/photo-1664448010557-cd3c22c21335?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5ldXJvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "9",
+        "title": "EcoDrive Showcases First All-Electric Self-Charging Vehicle",
+        "description": "EcoDrive, a leader in sustainable automotive solutions, has launched the world's first self-charging electric vehicle, named EcoCharge Z1. By harnessing solar and kinetic energy, the vehicle promises endless travel without the need for traditional charging.",
+        "author": "Shikha Thakur",
+        "date": "2023-08-24",
+        "img": "https://images.unsplash.com/photo-1639400439991-5ac84a6de289?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnV0dXJpc3RpYyUyMGVsZWN0cmljJTIwY2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "10",
+        "title": "SoundWaves Presents Smart Earbuds with Real-Time Language Translation",
+        "description": "Venturing into the realm of audio technology, SoundWaves releases its state-of-the-art smart earbuds, TransLingua Pro. These earbuds not only offer impeccable sound quality but also feature real-time language translation, revolutionizing the way users communicate globally.",
+        "author": "Emma Watson",
+        "date": "2023-08-19",
+        "img": "https://images.unsplash.com/photo-1591949565860-267247f76297?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGVhcmJ1ZHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+      }
+    ],
+    "est": [
+      {
+        "id": "1",
+        "title": "Tehnoloogia start-up käivitab väikeettevõtetele murrangulise toote",
+        "description": "Tehnoloogia start-up, InnovateTech, on turule toonud murrangulise toote, mis on mõeldud väikeettevõtete tegevuse lihtsustamiseks ja tõhususe suurendamiseks. Toode on juba turul haarav, saades varajastelt kasutajatelt positiivset tagasisidet",
+        "author": "Samantha Johnson",
+        "date": "2023-03-16",
+        "img": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "2",
+        "title": "XYZ ettevõtte uus nutitelefon jõuab turule",
+        "description": "XYZ ettevõte on tutvustanud oma viimast nutitelefoni - XYZ ProMax. Seade on varustatud tipptasemel kaameraga, võimsa protsessori ja kauakestva akuga. Müük oodatakse algavat järgmisel kuul. Eksperdid ennustavad sellele suurt populaarsust kasutajate seas.",
+        "author": "Michael Chen",
+        "date": "2023-03-15",
+        "img": "https://images.unsplash.com/photo-1494366222322-387658a1a976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNtYXJ0cGhvbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "3",
+        "title": "Tehnoloogiaettevõte ByteTech teatas uue sülearvuti väljalaskmisest professionaalidele",
+        "description": "Tehnoloogiaettevõte ByteTech rõõmustab oma fänne uudisega peatsest ProWork X1 sülearvuti turuletulekust, mis on loodud spetsiaalselt erinevate valdkondade professionaalidele. Seade on varustatud kõrge jõudlusega komponentide, peene disaini ja arenenud turvafunktsioonidega, mis kahtlemata muudavad selle oma klassi turul juhtivaks.",
+        "author": "Emma Watson",
+        "date": "2023-03-13",
+        "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXN0YXRlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "4",
+        "title": "Tehnoloogiafirma tutvustab järgmise põlvkonna kantavat seadet fitnessi entusiastidele",
+        "description": "Tehnoloogiafirma FitTech on teatanud oma viimase kantava seadme, FitBand Pro, käivitamisest, mis on suunatud fitnessi entusiastidele. Seade pakub arenenud jälgimisfunktsioone ja stiilset disaini, muutes selle fitnessi kantavate seadmete turul esimeseks valikuks.",
+        "author": "James Wilson",
+        "date": "2023-03-12",
+        "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2h8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "5",
+        "title": "GreenWave tutvustab päikesepatareiga nutitelefoni pikendatud akukestvusega",
+        "description": "Innovaatiline tehnoloogiagigant GreenWave on just teatanud oma viimasest imest: päikesepatareidega nutitelefonist nimega SolarWave X2. See uuenduslik seade lubab kasutajatele pikendatud akukestvust ja vähendab sagedase laadimise vajadust, vastates kasvavale nõudlusele jätkusuutlike tehnoloogiliste lahenduste järele.",
+        "author": "Samantha Johnson",
+        "date": "2023-07-18",
+        "img": "https://images.unsplash.com/photo-1598695727992-007150de1b5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdyZWVuJTIwcGhvbmV8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "6",
+        "title": "AeroTech tutvustab maailma kõige kergemat sülearvutit ärireisijatele",
+        "description": "Tehnoloogia tootja AeroTech on tutvustanud AeroLite Z3, mida reklaamitakse maailma kõige kergema sülearvutina. Ärireisijatele suunatud ultra-portatiivne seade ühendab endas võimsust ja sulgkerget disaini, tagades liikvel olles tõhususe ilma lisakoormuseta.",
+        "author": "Sergio Robertson",
+        "date": "2023-07-21",
+        "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHRoaW4lMjBsYXB0b3B8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "7",
+        "title": "VirtualScape Launches VR Headset with 360-Degree Real-Time Experience",
+        "description": "Leading the virtual reality frontier, VirtualScape debuts its next-gen VR headset, OmniView Pro. Offering users a complete 360-degree real-time immersive experience, it promises to redefine how consumers interact with digital content and gaming environments.",
+        "author": "Anthony Abramson",
+        "date": "2023-08-06",
+        "img": "https://images.unsplash.com/photo-1639174326326-6e2ef8d8ae39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHZyfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "8",
+        "title": "NeuroLink tutvustab aju-arvuti liidest täiustatud kognitiivsete võimete jaoks",
+        "description": "Murrangulises käigus esitleb NeuroLink oma viimast aju-arvuti liidest nimega NeuroBoost Pro. Seade väidab, et see suurendab kognitiivseid funktsioone ja mälu taastamist, sillutades teed inimmõistuse ja tehnoloogia vahel eeskujulikul viisil.",
+        "author": "Shikha Thakur",
+        "date": "2023-08-20",
+        "img": "https://images.unsplash.com/photo-1664448010557-cd3c22c21335?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5ldXJvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "9",
+        "title": "EcoDrive esitleb esimest täielikult elektrilist eneselaadivat sõidukit",
+        "description": "Jätkusuutlike autolahenduste liider EcoDrive on turule toonud maailma esimese eneselaadiva elektrisõiduki nimega EcoCharge Z1. Päikese- ja kineetilist energiat kasutades lubab sõiduk lõputut sõitu ilma traditsioonilise laadimisvajaduseta.",
+        "author": "Shikha Thakur",
+        "date": "2023-08-24",
+        "img": "https://images.unsplash.com/photo-1639400439991-5ac84a6de289?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnV0dXJpc3RpYyUyMGVsZWN0cmljJTIwY2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "10",
+        "title": "SoundWaves esitleb nutikaid kõrvaklappe reaalajas keele tõlkega",
+        "description": "Astuudes audiotehnoloogia valdkonda, toob SoundWaves turule oma tipptasemel nutikad kõrvaklapid, TransLingua Pro. Need kõrvaklapid ei paku mitte ainult laitmatut helikvaliteeti, vaid ka reaalajas keele tõlke funktsiooni, revolutsioneerides seda, kuidas kasutajad suhtlevad globaalselt.",
+        "author": "Emma Watson",
+        "date": "2023-08-19",
+        "img": "https://images.unsplash.com/photo-1591949565860-267247f76297?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGVhcmJ1ZHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+      }
+    ],
+    "ru": [
+      {
+        "id": "1",
+        "title": "Технологический стартап запускает революционный продукт для малого бизнеса",
+        "description": "Технологический стартап, InnovateTech, выпустил прорывной продукт, созданный для оптимизации операций и повышения эффективности малого бизнеса. Продукт уже завоевывает рынок, получая положительные отзывы от первых пользователей.",
+        "author": "Саманта Джонсон",
+        "date": "2023-03-16",
+        "img": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "2",
+        "title": "Новый смартфон от компании XYZ выходит на рынок",
+        "description": "Компания XYZ представила свой новейший смартфон - XYZ ProMax. Устройство оборудовано передовой камерой, мощным процессором и долгоживущим аккумулятором. Ожидается, что продажи стартуют в следующем месяце. Эксперты предсказывают ему высокую популярность среди пользователей.",
+        "author": "Майкл Чен",
+        "date": "2023-03-15",
+        "img": "https://images.unsplash.com/photo-1494366222322-387658a1a976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNtYXJ0cGhvbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "3",
+        "title": "Компания ByteTech анонсировала выпуск нового лэптопа для профессионалов",
+        "description": "Технологическая компания ByteTech радует своих поклонников новостью о скором выпуске лэптопа ProWork X1, созданного специально для профессионалов различных областей. Девайс оборудован высокопроизводительными компонентами, изысканным дизайном и продвинутыми функциями безопасности, что, без сомнения, сделает его лидером в своем классе на рынке.",
+        "author": "Эмма Уотсон",
+        "date": "2023-03-13",
+        "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXN0YXRlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "4",
+        "title": "Технологическая компания представляет новое поколение носимого устройства для любителей фитнеса",
+        "description": "Технологическая компания FitTech объявила о запуске своего нового носимого устройства, FitBand Pro, предназначенного для любителей фитнеса. Устройство предлагает передовые функции отслеживания и элегантный дизайн, что делает его лидером среди фитнес-гаджетов на рынке.",
+        "author": "Джеймс Уилсон",
+        "date": "2023-03-12",
+        "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2h8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "5",
+        "title": "GreenWave представляет смартфон с солнечной батареей и улучшенным временем работы от аккумулятора",
+        "description": "Инновационный техногигант GreenWave только что объявил о своем последнем творении: смартфоне на солнечных батареях под названием SolarWave X2. Это новаторское устройство обещает пользователям удлиненное время работы аккумулятора и сокращает необходимость в частой зарядке, удовлетворяя растущий спрос на устойчивые технологические решения.",
+        "author": "Саманта Джонсон",
+        "date": "2023-07-18",
+        "img": "https://images.unsplash.com/photo-1598695727992-007150de1b5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdyZWVuJTIwcGhvbmV8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "6",
+        "title": "AeroTech выпускает самый легкий в мире лэптоп для деловых путешественников",
+        "description": "Технический производитель AeroTech представил AeroLite Z3, рекламируемый как самый легкий лэптоп в мире. Идеально подходящий для деловых путешественников, этот сверхпортативный девайс сочетает в себе мощь с легким весом, обеспечивая эффективность в пути без лишнего балласта.",
+        "author": "Серхио Робертсон",
+        "date": "2023-07-21",
+        "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHRoaW4lMjBsYXB0b3B8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "7",
+        "title": "VirtualScape запускает VR-гарнитуру с 360-градусным реальным опытом",
+        "description": "Лидируя на фронте виртуальной реальности, VirtualScape представляет свою гарнитуру следующего поколения, OmniView Pro. Предлагая пользователям полный 360-градусный реальный погружающий опыт, она обещает переопределить, как потребители взаимодействуют с цифровым контентом и игровыми средами.",
+        "author": "Энтони Абрамсон",
+        "date": "2023-08-06",
+        "img": "https://images.unsplash.com/photo-1639174326326-6e2ef8d8ae39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHZyfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "8",
+        "title": "NeuroLink представляет интерфейс мозг-компьютер для улучшения когнитивных способностей",
+        "description": "Сделав прорыв, NeuroLink представляет свой последний интерфейс мозг-компьютер, названный NeuroBoost Pro. Устройство предположительно улучшает когнитивные функции и воспоминания, устраняя разрыв между человеческим разумом и технологией в беспрецедентных масштабах.",
+        "author": "Шикха Тхакур",
+        "date": "2023-08-20",
+        "img": "https://images.unsplash.com/photo-1664448010557-cd3c22c21335?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5ldXJvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "9",
+        "title": "EcoDrive демонстрирует первое полностью электрическое авто с самозарядкой",
+        "description": "EcoDrive, лидер в области устойчивых автомобильных решений, запустил первое в мире электрическое авто с самозарядкой под названием EcoCharge Z1. Используя солнечную и кинетическую энергию, автомобиль обещает бесконечные поездки без необходимости в традиционной зарядке.",
+        "author": "Шикха Тхакур",
+        "date": "2023-08-24",
+        "img": "https://images.unsplash.com/photo-1639400439991-5ac84a6de289?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnV0dXJpc3RpYyUyMGVsZWN0cmljJTIwY2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "10",
+        "title": "SoundWaves представляет умные наушники с переводом языка в реальном времени",
+        "description": "Осваивая область аудиотехнологий, SoundWaves выпускает свои передовые умные наушники TransLingua Pro. Эти наушники не только предлагают безупречное качество звука, но и оснащены функцией перевода языка в реальном времени, радикально меняя способ общения пользователей по всему миру.",
+        "author": "Эмма Уотсон",
+        "date": "2023-08-19",
+        "img": "https://images.unsplash.com/photo-1591949565860-267247f76297?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGVhcmJ1ZHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+      }
+    ]
+  }
+]
