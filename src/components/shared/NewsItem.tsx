@@ -31,6 +31,7 @@ const NewsWrapper = styled.div`
   border-radius: 20px;
   border: 1px solid #c8c8c8;
   padding: 20px;
+  gap: 50px;
   flex: 1;
   @media (max-width: 617px) {
     flex-direction: column;

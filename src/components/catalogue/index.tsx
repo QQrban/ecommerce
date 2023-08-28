@@ -25,11 +25,10 @@ const CatalogueContainer = styled.div`
 `;
 
 const CatalogueWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 30px;
   display: flex;
   @media (max-width: 1000px) {
     flex-direction: column;
-    margin-top: 30px;
   }
   @media (max-width: 968px) {
     align-items: center;

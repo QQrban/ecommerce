@@ -5,7 +5,7 @@ import Catalogue from './components/catalogue';
 import Footer from './components/footer';
 import Header from './components/header';
 import Home from './components/home';
-import News from './components/news';
+import NewsPage from './components/news';
 import Services from './components/services';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalogue" element={<Catalogue />} />
           <Route path="/services/*" element={<Services />} />
-          <Route path="/news" element={<News />} />
+          <Route path="/news" element={<NewsPage />} />
         </Routes>
       </MainStyled>
       <Footer />
