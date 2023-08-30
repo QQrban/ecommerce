@@ -7,6 +7,7 @@ import Header from './components/header';
 import Home from './components/home';
 import NewsPage from './components/news';
 import Services from './components/services';
+import SelectedProduct from './components/product';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/catalogue" element={<Catalogue />} />
           <Route path="/services/*" element={<Services />} />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/popo" element={<SelectedProduct />} />
         </Routes>
       </MainStyled>
       <Footer />
