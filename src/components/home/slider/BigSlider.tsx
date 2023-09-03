@@ -27,8 +27,8 @@ export default function BigSlider() {
   const handleChangeSlide = (index: number) => {
     if (products && products[index]) {
       setIsChanging(true);
-      setActiveSlideIndex(index);
       setTimeout(() => {
+        setActiveSlideIndex(index);
         setActiveSlide({
           name: products[index].name,
           photo: products[index].img,
