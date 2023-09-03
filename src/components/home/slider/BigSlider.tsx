@@ -111,6 +111,14 @@ const ProductName = styled.div`
   font-size: 43px;
   font-weight: 700;
   max-width: 400px;
+  @media (max-width: 481px) {
+    font-size: 36px;
+    text-align: center;
+  }
+  @media (max-width: 419px) {
+    font-size: 32px;
+    text-align: center;
+  }
 `;
 
 type ImgWrapperProps = {
@@ -134,6 +142,9 @@ const SliderButtons = styled.div`
   display: flex;
   gap: 21px;
   margin-top: 19px;
+  @media (max-width: 481px) {
+    justify-content: center;
+  }
 `;
 
 const RadioWrapper = styled.div`
@@ -187,7 +198,7 @@ const ShopButton = styled.button`
   color: #fff;
   font-size: 16px;
   font-weight: 600;
-  @media (max-width: 356px) {
+  @media (max-width: 393px) {
     padding: 10px 20px;
   }
   &:hover {
@@ -202,7 +213,7 @@ const ViewButton = styled.button`
   color: #316887;
   font-size: 16px;
   font-weight: 600;
-  @media (max-width: 356px) {
+  @media (max-width: 393px) {
     padding: 10px 20px;
   }
   &:hover {
