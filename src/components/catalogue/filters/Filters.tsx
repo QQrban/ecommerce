@@ -1,6 +1,5 @@
 import Brand from './Brand';
 import Categories from './Categories';
-import Colors from './Colors';
 import Price from './Price';
 
 export default function Filters() {
@@ -8,7 +7,6 @@ export default function Filters() {
     <div>
       <Categories />
       <Brand />
-      <Colors />
       <Price />
     </div>
   );

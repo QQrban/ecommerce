@@ -18,10 +18,6 @@ const specs = [
     title: 'Headphone Connection',
     value: 'Bluetooth',
   },
-  {
-    title: 'Color',
-    value: 'White',
-  },
 ];
 
 const features = [

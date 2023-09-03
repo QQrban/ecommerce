@@ -1,60 +1,65 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
-import camera from '../../../assets/camera.png';
-import airpods from '../../../assets/pods.png';
-import mac from '../../../assets/watch.png';
+import { useSelector } from 'react-redux';
+import { ProductState } from '../../../redux/stateService';
 
 interface ICarousel {
   name: string;
   photo: string;
 }
 
-interface ICarousels {
-  [key: string]: ICarousel;
-}
+type RootState = {
+  products: ProductState;
+};
 
 export default function BigSlider() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
-  const carousel: ICarousels = {
-    nikon: {
-      name: `Nikon D3300 + 18-55mm VR II Kit, Black`,
-      photo: camera,
-    },
-    pods: {
-      name: `Apple AirPods 2 - True-Wireless Earbuds`,
-      photo: airpods,
-    },
-    macbook: {
-      name: `Apple Watch Series 8 GPS, Silver`,
-      photo: mac,
-    },
-  };
+  const products = useSelector((state: RootState) => state.products.products);
 
-  const [activeSlide, setActiveSlide] = useState<ICarousel>(carousel.nikon);
+  const [activeSlide, setActiveSlide] = useState<ICarousel | null>(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
   const [isChanging, setIsChanging] = useState<boolean>(false);
 
-  const handleChangeSlide = (newSlide: ICarousel) => {
-    setIsChanging(true);
-
-    setTimeout(() => {
-      setActiveSlide(newSlide);
-      setIsChanging(false);
-    }, 500);
+  const handleChangeSlide = (index: number) => {
+    if (products && products[index]) {
+      setIsChanging(true);
+      setActiveSlideIndex(index);
+      setTimeout(() => {
+        setActiveSlide({
+          name: products[index].name,
+          photo: products[index].img,
+        });
+        setIsChanging(false);
+      }, 500);
+    }
   };
+
+  useEffect(() => {
+    if (products && products[activeSlideIndex]) {
+      setActiveSlide({
+        name: products[activeSlideIndex].name,
+        photo: products[activeSlideIndex].img,
+      });
+    }
+  }, [products, activeSlideIndex]);
 
   return (
     <SliderWrapper>
       <LeftColumn>
-        <ProductName>{activeSlide.name}</ProductName>
+        <ProductName>{activeSlide?.name}</ProductName>
         <SliderButtons>
           <ShopButton>{t('slider.button.shopNow')}</ShopButton>
-          <ViewButton>{t('slider.button.viewMore')}</ViewButton>
+          <ViewButton onClick={() => navigate('/catalogue')}>
+            {t('slider.button.viewMore')}
+          </ViewButton>
         </SliderButtons>
         <RadioWrapper>
           <input
-            onClick={() => handleChangeSlide(carousel.nikon)}
+            onClick={() => handleChangeSlide(0)}
             defaultChecked
             type="radio"
             id="option1"
@@ -62,14 +67,14 @@ export default function BigSlider() {
           />
           <RadioButtonLabel htmlFor="option1"></RadioButtonLabel>
           <input
-            onClick={() => handleChangeSlide(carousel.pods)}
+            onClick={() => handleChangeSlide(1)}
             type="radio"
             id="option2"
             name="option1"
           />
           <RadioButtonLabel htmlFor="option2"></RadioButtonLabel>
           <input
-            onClick={() => handleChangeSlide(carousel.macbook)}
+            onClick={() => handleChangeSlide(2)}
             type="radio"
             id="option3"
             name="option1"
@@ -78,7 +83,7 @@ export default function BigSlider() {
         </RadioWrapper>
       </LeftColumn>
       <ImgWrapper $isсhanging={isChanging}>
-        <img src={activeSlide.photo} alt="camera" />
+        <img src={activeSlide?.photo} alt={activeSlide?.name} />
       </ImgWrapper>
     </SliderWrapper>
   );

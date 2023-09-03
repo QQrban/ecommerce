@@ -13,7 +13,7 @@ export default function Price() {
     <>
       <ExpandWrapper>
         <ExpandFilter
-          background="#003f62"
+          background="#eda415"
           label={t('filter.price.title')}
           expand={expand}
           setExpand={setExpand}

@@ -17,19 +17,14 @@ export default function Brand() {
       stock: 6,
     },
     {
-      id: 'nikon',
-      label: 'Nikon',
+      id: 'beats',
+      label: 'Beats',
       stock: 6,
     },
     {
       id: 'canon',
       label: 'Canon',
       stock: 4,
-    },
-    {
-      id: 'acer',
-      label: 'Acer',
-      stock: 8,
     },
     {
       id: 'dell',
@@ -47,8 +42,8 @@ export default function Brand() {
       stock: 54,
     },
     {
-      id: 'microsoft',
-      label: 'Microsoft',
+      id: 'lg',
+      label: 'LG',
       stock: 20,
     },
     {

@@ -5,11 +5,13 @@ import useMediaQuery from '../../../shared/hooks/useMediaQuery';
 import { StyledTitle } from '../../../shared/styled/styled';
 import ProductItem from '../../shared/ProductItem';
 import { populargoods } from './mock';
+import { useNavigate } from 'react-router-dom';
 
 export default function Popular() {
   const [page, setPage] = useState<number>(1);
   const { t } = useTranslation();
-  const matches = useMediaQuery('(min-width: 990px)');
+  const navigate = useNavigate();
+  const matches = useMediaQuery('(min-width: 1325px)');
 
   const handlePageChange = (newPage: number) => {
     if (page === newPage) return;
@@ -28,28 +30,11 @@ export default function Popular() {
     <PopularWrapper style={{ marginTop: '70px', padding: '5px 10px' }}>
       <PopularHeader>
         <StyledTitle>{t('home.title.popularGoods')}</StyledTitle>
-        <Pills>
-          <Pill>{t('home.popular.pills.cameras')}</Pill>
-          <Pill>{t('home.popular.pills.laptops')}</Pill>
-          <Pill>{t('home.popular.pills.tablets')}</Pill>
-        </Pills>
+        <HeaderButton onClick={() => navigate('/catalogue')}>
+          {t('home.news.button')}
+        </HeaderButton>
       </PopularHeader>
       {matches ? (
-        <PopularGrid>
-          {page === 1 &&
-            populargoods
-              .slice(0, 8)
-              .map((product) => (
-                <ProductItem key={product.id} product={product} />
-              ))}
-          {page === 2 &&
-            populargoods
-              .slice(8, 16)
-              .map((product) => (
-                <ProductItem key={product.id} product={product} />
-              ))}
-        </PopularGrid>
-      ) : (
         <PopularGrid>
           {page === 1 &&
             populargoods
@@ -63,15 +48,24 @@ export default function Popular() {
               .map((product) => (
                 <ProductItem key={product.id} product={product} />
               ))}
-          {page === 3 &&
+        </PopularGrid>
+      ) : (
+        <PopularGrid>
+          {page === 1 &&
             populargoods
-              .slice(8, 12)
+              .slice(0, 3)
               .map((product) => (
                 <ProductItem key={product.id} product={product} />
               ))}
-          {page === 4 &&
+          {page === 2 &&
             populargoods
-              .slice(12, 16)
+              .slice(3, 6)
+              .map((product) => (
+                <ProductItem key={product.id} product={product} />
+              ))}
+          {page === 3 &&
+            populargoods
+              .slice(6, 8)
               .map((product) => (
                 <ProductItem key={product.id} product={product} />
               ))}
@@ -122,14 +116,6 @@ export default function Popular() {
             name="option10"
           />
           <RadioButtonLabel htmlFor="option30"></RadioButtonLabel>
-          <input
-            onChange={() => handlePageChange(4)}
-            checked={page === 4}
-            type="radio"
-            id="option40"
-            name="option10"
-          />
-          <RadioButtonLabel htmlFor="option40"></RadioButtonLabel>
         </RadioWrapper>
       )}
     </PopularWrapper>
@@ -150,31 +136,12 @@ const PopularHeader = styled.div`
   }
 `;
 
-const Pills = styled.div`
-  display: flex;
-  gap: 13px;
-  @media (max-width: 514px) {
-    gap: 7px;
-  }
-  @media (max-width: 364px) {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-`;
-
-const Pill = styled.button`
-  border-radius: 20px;
-  border: 1px solid #b5b5b5;
-  padding: 10px 40px;
+const HeaderButton = styled.button`
   color: #1b5a7d;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   &:hover {
-    background: #1b5a7d;
-    color: white;
-  }
-  @media (max-width: 555px) {
-    padding: 5px 10px;
+    text-decoration: underline;
   }
 `;
 
@@ -182,10 +149,9 @@ const PopularGrid = styled.div`
   margin-top: 53px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   gap: 15px;
-  @media (max-width: 1395px) {
+  @media (max-width: 1325px) {
     grid-template-columns: repeat(3, 1fr);
   }
   @media (max-width: 990px) {

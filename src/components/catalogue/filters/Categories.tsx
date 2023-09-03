@@ -41,11 +41,6 @@ export default function Categories() {
       label: t('filter.categories.phones'),
       stock: 54,
     },
-    {
-      id: 'gaming',
-      label: t('filter.categories.gaming'),
-      stock: 20,
-    },
   ];
 
   return (
