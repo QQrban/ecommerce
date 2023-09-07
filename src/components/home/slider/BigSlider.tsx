@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components';
-import { useSelector } from 'react-redux';
 import { ProductState } from '../../../redux/stateService';
 
 interface ICarousel {
   name: string;
   photo: string;
+  price: string;
 }
 
 type RootState = {
@@ -21,7 +23,7 @@ export default function BigSlider() {
   const products = useSelector((state: RootState) => state.products.products);
 
   const [activeSlide, setActiveSlide] = useState<ICarousel | null>(null);
-  const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
+  const [activeSlideIndex, setActiveSlideIndex] = useState<number>(15);
   const [isChanging, setIsChanging] = useState<boolean>(false);
 
   const handleChangeSlide = (index: number) => {
@@ -32,6 +34,7 @@ export default function BigSlider() {
         setActiveSlide({
           name: products[index].name,
           photo: products[index].img,
+          price: products[index].price,
         });
         setIsChanging(false);
       }, 500);
@@ -43,65 +46,86 @@ export default function BigSlider() {
       setActiveSlide({
         name: products[activeSlideIndex].name,
         photo: products[activeSlideIndex].img,
+        price: products[activeSlideIndex].price,
       });
     }
   }, [products, activeSlideIndex]);
 
   return (
-    <SliderWrapper>
-      <LeftColumn>
-        <ProductName>{activeSlide?.name}</ProductName>
-        <SliderButtons>
-          <ShopButton>{t('slider.button.shopNow')}</ShopButton>
-          <ViewButton onClick={() => navigate('/catalogue')}>
-            {t('slider.button.viewMore')}
-          </ViewButton>
-        </SliderButtons>
-        <RadioWrapper>
-          <input
-            onClick={() => handleChangeSlide(0)}
-            defaultChecked
-            type="radio"
-            id="option1"
-            name="option1"
-          />
-          <RadioButtonLabel htmlFor="option1"></RadioButtonLabel>
-          <input
-            onClick={() => handleChangeSlide(1)}
-            type="radio"
-            id="option2"
-            name="option1"
-          />
-          <RadioButtonLabel htmlFor="option2"></RadioButtonLabel>
-          <input
-            onClick={() => handleChangeSlide(2)}
-            type="radio"
-            id="option3"
-            name="option1"
-          />
-          <RadioButtonLabel htmlFor="option3"></RadioButtonLabel>
-        </RadioWrapper>
-      </LeftColumn>
-      <ImgWrapper $isсhanging={isChanging}>
-        <img src={activeSlide?.photo} alt={activeSlide?.name} />
-      </ImgWrapper>
-    </SliderWrapper>
+    <>
+      {products ? (
+        <SliderWrapper>
+          <LeftColumn>
+            <ProductName>{activeSlide?.name}</ProductName>
+            <ProductPrice>{activeSlide?.price}€</ProductPrice>
+            <SliderButtons>
+              <ShopButton>{t('slider.button.shopNow')}</ShopButton>
+              <ViewButton onClick={() => navigate('/catalogue')}>
+                {t('slider.button.viewMore')}
+              </ViewButton>
+            </SliderButtons>
+            <RadioWrapper>
+              <input
+                onClick={() => handleChangeSlide(15)}
+                defaultChecked
+                type="radio"
+                id="option1"
+                name="option1"
+              />
+              <RadioButtonLabel htmlFor="option1"></RadioButtonLabel>
+              <input
+                onClick={() => handleChangeSlide(10)}
+                type="radio"
+                id="option2"
+                name="option1"
+              />
+              <RadioButtonLabel htmlFor="option2"></RadioButtonLabel>
+              <input
+                onClick={() => handleChangeSlide(11)}
+                type="radio"
+                id="option3"
+                name="option1"
+              />
+              <RadioButtonLabel htmlFor="option3"></RadioButtonLabel>
+            </RadioWrapper>
+          </LeftColumn>
+          <ImgWrapper $isсhanging={isChanging}>
+            <img src={activeSlide?.photo} alt={activeSlide?.name} />
+          </ImgWrapper>
+        </SliderWrapper>
+      ) : (
+        <LoadingSlider>
+          <Spinner style={{ width: '6rem', height: '6rem' }} animation="grow" />
+        </LoadingSlider>
+      )}
+    </>
   );
 }
 
 const SliderWrapper = styled.div`
   height: 394px;
   display: flex;
+  gap: 20px;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 763px) {
+  @media (max-width: 900px) {
     flex-direction: column;
     height: auto;
   }
 `;
 
+const LoadingSlider = styled.div`
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 900px) {
+    height: 500px;
+  }
+`;
+
 const LeftColumn = styled.div`
-  @media (max-width: 763px) {
+  @media (max-width: 900px) {
     order: 2;
   }
 `;
@@ -121,6 +145,17 @@ const ProductName = styled.div`
   }
 `;
 
+const ProductPrice = styled.div`
+  color: #444;
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 19px;
+  @media (max-width: 481px) {
+    font-size: 36px;
+    text-align: center;
+  }
+`;
+
 type ImgWrapperProps = {
   $isсhanging: boolean;
 };
@@ -128,9 +163,12 @@ type ImgWrapperProps = {
 const ImgWrapper = styled.div<ImgWrapperProps>`
   transition: opacity 0.5s ease-in-out;
   opacity: ${({ $isсhanging }) => ($isсhanging ? 0 : 1)};
-  width: 331px;
+  width: 450px;
   flex-shrink: 0;
   @media (max-width: 458px) {
+    width: 350px;
+  }
+  @media (max-width: 380px) {
     width: 280px;
   }
   .fadeOut {
@@ -144,6 +182,9 @@ const SliderButtons = styled.div`
   margin-top: 19px;
   @media (max-width: 481px) {
     justify-content: center;
+  }
+  @media (max-width: 370px) {
+    flex-direction: column;
   }
 `;
 

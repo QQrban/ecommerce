@@ -1,14 +1,20 @@
+import Spinner from 'react-bootstrap/Spinner';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import { styled } from 'styled-components';
-import controller from '../../../assets/controller-black.png';
-import iphone from '../../../assets/iphone.png';
-import laptop from '../../../assets/laptop.png';
+import { ProductState } from '../../../redux/stateService';
 import { StyledTitle } from '../../../shared/styled/styled';
 import './SmallSlider.css';
 
+type RootState = {
+  products: ProductState;
+};
+
 export default function SmallSlider() {
   const { t } = useTranslation();
+
+  const products = useSelector((state: RootState) => state.products.products);
 
   const settings = {
     dots: true,
@@ -42,77 +48,36 @@ export default function SmallSlider() {
     ],
   };
   return (
-    <SliderWrapper>
-      <StyledTitle style={{ margin: '0 0 30px 0' }}>
-        {t('home.title.newGoods')}
-      </StyledTitle>
-      <SliderStyled {...settings}>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={iphone} alt="" />
-            </ImgContainer>
-            <CardText>iPhone 14 Pro Max 256GB 5G</CardText>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={controller} alt="" />
-            </ImgContainer>
-            <CardText>Microsoft Xbox One / Series X/S</CardText>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={laptop} alt="" />
-            </ImgContainer>
-            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={iphone} alt="" />
-            </ImgContainer>
-            <CardText>iPhone 14 Pro Max 256GB 5G</CardText>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={laptop} alt="" />
-            </ImgContainer>
-            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={iphone} alt="" />
-            </ImgContainer>
-            <CardText>iPhone 14 Pro Max 256GB 5G</CardText>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={laptop} alt="" />
-            </ImgContainer>
-            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
-          </ImgWrapper>
-        </Card>
-        <Card>
-          <ImgWrapper>
-            <ImgContainer>
-              <img src={laptop} alt="" />
-            </ImgContainer>
-            <CardText>Apple MacBook Air 13", 2022, 8 GB</CardText>
-          </ImgWrapper>
-        </Card>
-      </SliderStyled>
-    </SliderWrapper>
+    <>
+      <SliderWrapper>
+        <StyledTitle style={{ margin: '0 0 30px 0' }}>
+          {t('home.title.newGoods')}
+        </StyledTitle>
+        {products ? (
+          <Slider {...settings}>
+            {products
+              ?.filter((type) => type.goodsType === 'new')
+              .map((product) => (
+                <Card key={product.productCode}>
+                  <ImgWrapper>
+                    <ImgContainer>
+                      <img src={product.img} alt={product.name} />
+                    </ImgContainer>
+                    <CardText>{product.name}</CardText>
+                  </ImgWrapper>
+                </Card>
+              ))}
+          </Slider>
+        ) : (
+          <LoadingSlider>
+            <Spinner
+              style={{ width: '6rem', height: '6rem' }}
+              animation="grow"
+            />
+          </LoadingSlider>
+        )}
+      </SliderWrapper>
+    </>
   );
 }
 
@@ -127,7 +92,12 @@ const SliderWrapper = styled.div`
   }
 `;
 
-const SliderStyled = styled(Slider)``;
+const LoadingSlider = styled.div`
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Card = styled.div`
   max-width: 400px;

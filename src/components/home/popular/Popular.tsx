@@ -4,14 +4,22 @@ import { styled } from 'styled-components';
 import useMediaQuery from '../../../shared/hooks/useMediaQuery';
 import { StyledTitle } from '../../../shared/styled/styled';
 import ProductItem from '../../shared/ProductItem';
-import { populargoods } from './mock';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { ProductState } from '../../../redux/stateService';
+import Spinner from 'react-bootstrap/Spinner';
+
+type RootState = {
+  products: ProductState;
+};
 
 export default function Popular() {
   const [page, setPage] = useState<number>(1);
   const { t } = useTranslation();
   const navigate = useNavigate();
   const matches = useMediaQuery('(min-width: 1325px)');
+
+  const products = useSelector((state: RootState) => state.products.products);
 
   const handlePageChange = (newPage: number) => {
     if (page === newPage) return;
@@ -35,41 +43,54 @@ export default function Popular() {
         </HeaderButton>
       </PopularHeader>
       {matches ? (
+        products ? (
+          <PopularGrid>
+            {page === 1 &&
+              products
+                .slice(5, 9)
+                .map((product) => (
+                  <ProductItem key={product.name} product={product} />
+                ))}
+            {page === 2 &&
+              products
+                .slice(9, 13)
+                .map((product) => (
+                  <ProductItem key={product.name} product={product} />
+                ))}
+          </PopularGrid>
+        ) : (
+          <LoadingSlider $matches={matches}>
+            <Spinner
+              style={{ width: '6rem', height: '6rem' }}
+              animation="grow"
+            />
+          </LoadingSlider>
+        )
+      ) : products ? (
         <PopularGrid>
           {page === 1 &&
-            populargoods
-              .slice(0, 4)
+            products
+              .slice(5, 8)
               .map((product) => (
-                <ProductItem key={product.id} product={product} />
+                <ProductItem key={product.name} product={product} />
               ))}
           {page === 2 &&
-            populargoods
-              .slice(4, 8)
+            products
+              .slice(8, 11)
               .map((product) => (
-                <ProductItem key={product.id} product={product} />
+                <ProductItem key={product.name} product={product} />
+              ))}
+          {page === 3 &&
+            products
+              .slice(11, 13)
+              .map((product) => (
+                <ProductItem key={product.name} product={product} />
               ))}
         </PopularGrid>
       ) : (
-        <PopularGrid>
-          {page === 1 &&
-            populargoods
-              .slice(0, 3)
-              .map((product) => (
-                <ProductItem key={product.id} product={product} />
-              ))}
-          {page === 2 &&
-            populargoods
-              .slice(3, 6)
-              .map((product) => (
-                <ProductItem key={product.id} product={product} />
-              ))}
-          {page === 3 &&
-            populargoods
-              .slice(6, 8)
-              .map((product) => (
-                <ProductItem key={product.id} product={product} />
-              ))}
-        </PopularGrid>
+        <LoadingSlider $matches={matches}>
+          <Spinner style={{ width: '6rem', height: '6rem' }} animation="grow" />
+        </LoadingSlider>
       )}
       {matches ? (
         <RadioWrapper>
@@ -146,9 +167,9 @@ const HeaderButton = styled.button`
 `;
 
 const PopularGrid = styled.div`
-  margin-top: 53px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin: 53px auto 0 auto;
   justify-items: center;
   gap: 15px;
   @media (max-width: 1325px) {
@@ -157,11 +178,21 @@ const PopularGrid = styled.div`
   @media (max-width: 990px) {
     grid-template-columns: repeat(2, 1fr);
     max-width: 700px;
-    margin: 53px auto 0 auto;
   }
   @media (max-width: 745px) {
     grid-template-columns: 1fr;
   }
+`;
+
+interface LoadingSliderProps {
+  $matches: boolean;
+}
+
+const LoadingSlider = styled.div<LoadingSliderProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: ${($matches) => ($matches ? '160px' : '310px')};
 `;
 
 const RadioWrapper = styled.div`

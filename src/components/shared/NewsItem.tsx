@@ -33,10 +33,11 @@ const NewsWrapper = styled.div`
   padding: 20px;
   gap: 50px;
   flex: 1;
-  @media (max-width: 617px) {
+  @media (max-width: 679px) {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    gap: 30px;
   }
 `;
 
@@ -45,7 +46,7 @@ const ImgContainer = styled.div`
   img {
     border-radius: 20px;
   }
-  @media (max-width: 617px) {
+  @media (max-width: 679px) {
     width: 270px;
   }
 `;

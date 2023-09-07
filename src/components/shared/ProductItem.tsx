@@ -3,10 +3,9 @@ import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import { styled } from 'styled-components';
 
 interface Product {
-  id: number;
-  photo: string;
+  img: string;
   name: string;
-  price: number;
+  price: string;
 }
 
 type Products = {
@@ -19,7 +18,7 @@ export default function ProductItem({ product }: Products) {
   return (
     <GridItem>
       <ImgWrapper>
-        <img src={product.photo} alt="" />
+        <StyledImg src={product.img} alt={product.name} />
       </ImgWrapper>
       <ItemName>{product.name}</ItemName>
       <ItemPrice>{product.price}€</ItemPrice>
@@ -51,6 +50,14 @@ const GridItem = styled.div`
 
 const ImgWrapper = styled.div`
   width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const StyledImg = styled.img`
+  width: 130px;
 `;
 
 const ItemName = styled.div`
@@ -80,6 +87,9 @@ const BuyButton = styled.button`
   font-weight: 600;
   &:hover {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  @media (max-width: 361px) {
+    padding: 5px 10px;
   }
 `;
 
